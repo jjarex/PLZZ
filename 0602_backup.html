@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/ebook.css">
+
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.easing.1.3.min.js"></script>
+    
+</head>
+<body>
+  <div id="wrap">
+<!--
+      <h1><a href="aladin_index.html"><img src="img/bg/logo.png"/></a></h1>
+-->
+
+   
+   <div id="mydiv">
+  <div id="mydivheader">Click here to move</div>
+
+        <ul id="menu">
+       <li class="on"><a href="#">Best seller✦베스트셀러</a></li>
+       <li><a href="#">NEW✦이번 주 신간</a></li>
+       <li><a href="#">이 광활한 우주에✦중고책방</a></li>
+       <li><a href="#">eBook✦전자책</a></li>
+       <li><a href="#">AudioBook✦오디오북</a></li>
+       <li><a href="#">편집자의 추천</a></li>
+       <li><a href="#">알라딘 굿즈✦GOODS</a></li>
+       <li><a href="#">음반✦DVD✦BD</a></li>
+       <li><a href="#">카드 리뷰</a></li>
+      </ul>
+</div>
+
+<script>
+//Make the DIV element draggagle:
+dragElement(document.getElementById("mydiv"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+</script>
+   
+   
+   <ul id="sns">
+       <li><a href><i class="fa fa-facebook"></i></a></li>
+       <li><a href><i class="fa fa-twitter-square"></i></a></li>
+       <li><a href><i class="fa fa-instagram-square"></i></a></li>
+   </ul>
+   
+   
+   
+    <div id="wrap">
+   
+<section>
+           <div class="header"> </div>
+            <article>
+               <a href="https://www.aladin.co.kr/shop/common/wbest.aspx?BranchType=1?CID=1&start=we"><p><img src="img/bg/bestseller_calli.png" alt="bestseller"></p>
+                <span>이번 달의 베스트셀러 알아보기</span></a>
+            </article>
+            <span class="pattern"></span>
+            <div class="right_txt">
+                <p>No.<span>6</span>
+                    _10<br><br><br><br><br><br><br>
+                이 책의 첫 문장</p>
+                <div class="firstph">
+                <ul>
+               <li class=""><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=238813725"><h1>지구의 주인은 누구일까? 만물의 영장이라고 하는 인간?</h1></a></li>
+               <li class=""><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=238150290"><h1>최근 부쩍 '디플레이션(Deflation, 이하 '디플레')이라는<br> 말이 자주 언론에 등장한다.</h1></a></li>
+               <li class=""><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=176821146&start=wz&ptid=9&utm_source=aladin&utm_medium=wizard&utm_campaign=choice&utm_content=welcome" class=""><h1>어원 학습을 통해 얻을 수 있는 3가지 효과!</h1></a></li>
+               <li class=""><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=239953942"><h1>어떤 일을 잘 해내야겠다는 생각에<br> 어깨에 잔뜩 힘을 주고 앞만 보고 달리다 보면<br> 문득 전혀 엉뚱한 곳에 와 있음을 깨닫고<br> 멈칫하는 때가 있다.</h1></a></li>
+               <li class=""><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=239957798"><h1>나만의 대출증 만들기, 스티커로 도서관 지도 완성하기!</h1></a></li>
+               <li class="onn"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=142244075"><h1>그러니깐 금요일 밤 시간대의 전철이란 으레 그렇다.</h1></a></li>
+               <li class=""><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=192372285"><h1>나, 박막례는 2남 4녀 중 막내딸이다.</h1></a></li>
+               <li class=""><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=231789291"><h1>왜 가미야마로 사람과 기업이 모여드는 걸까.</h1></a></li>
+               <li class=""><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=239883126"><h1>이름이 가진 힘은 대단하다. <br>16세기에 처음 작성된 초기의 세계지도에는<br>이름이 붙지 않은 넓은 구역이 존재했다.</h1></a></li>
+               <li class=""><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=238605631"><h1>투명한 벽으로 둘러싸인 청년은<br> 표정만 보면 약간 지쳐서 잠든 것 같았다.</h1></a></li>
+               <li class=""><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=60836103"><h1>겨우 34층밖에 안 되는 나지막한 잿빛 건물</h1></a></li>
+                </ul></div>
+            </div>
+            
+            <div class="bestseller_book">
+                <div class="bestseller_booksize_back"></div>
+                <div class="bestseller_bookcover"><img src="img/"></div>
+                <div class="bestseller_booktitle"></div>
+            </div>
+            
+              <div id="wrapper">
+                  <div id="image" class="pagwa"></div>
+        <div id="nav1">
+            <ul>
+                <li id="smsBtn">
+                    <a href="javascript:;" class=""></a>
+                </li>
+                <li id="difleBtn">
+                    <a href="javascript:;"></a>    
+                </li>
+                <li id="rootengBtn" class="">
+                    <a href="javascript:;" class=""></a>
+                </li>
+                <li id="pikachuBtn">
+                    <a href="javascript:;"></a>
+                </li>
+                <li id="librBtn">
+                    <a href="javascript:;" class=""></a>
+                </li>
+                <li id="pagwaBtn" class="pagwa">
+                    <a href="javascript:;" class="on"></a>    
+                </li>
+                <li id="makryeBtn" >
+                    <a href="javascript:;" class=""></a>
+                </li>
+                <li id="evolveBtn">
+                    <a href="javascript:;"></a>
+                </li>
+                <li id="sapiensBtn">
+                    <a href="javascript:;" class=""></a>
+                </li>
+                <li id="dokioBtn">
+                    <a href="javascript:;"></a>    
+                </li>
+                <li id="newworldBtn">
+                    <a href="javascript:;" class=""></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    
+    </section>
+        
+<section>
+            <article></article>
+<!--
+            <div class="new_backline_wrap">
+                  <div class="new_backline">
+                    <ul>
+                        <li><a href="https://www.aladin.co.kr/shop/common/wnew.aspx?BranchType=1&start=we"><img src="img/new/img_new_ph_01.png" alt="이번주신간"></a></li>
+                        <li><img src="img/new/img_new_star_01.png"></li>
+                        <li><a href="https://www.aladin.co.kr/shop/common/wnew.aspx?BranchType=1&start=we"><img src="img/new/img_new_ph_02.png" alt="이달의주목도서"></a></li>
+                        <li><img src="img/new/img_new_star_01.png"></li>
+                        <li><a href="https://www.aladin.co.kr/events/wevent.aspx?EventId=205465&start=we"><img src="img/new/img_new_ph_03.png" alt="한국문학"></a></li>
+                        <li><img src="img/new/img_new_star_01.png"></li>
+                        <li><a href="https://www.aladin.co.kr/shop/common/wnew.aspx?BranchType=1&start=we"><img src="img/new/img_new_ph_01.png" alt="이번주신간"></a></li>
+                    </ul>
+                </div>
+                <div class="new_backline"></div>
+                <div class="new_backline"></div>
+                <div class="new_backline"></div>
+                <div class="new_backline">
+                    <ul>
+                        <li><a href="https://www.aladin.co.kr/shop/common/wnew.aspx?BranchType=1&start=we"><img src="img/new/img_new_ph_01.png" alt="이번주신간"></a></li>
+                        <li><img src="img/new/img_new_star_01.png"></li>
+                        <li><a href="https://www.aladin.co.kr/shop/common/wnew.aspx?BranchType=1&start=we"><img src="img/new/img_new_ph_02.png" alt="이달의주목도서"></a></li>
+                        <li><img src="img/new/img_new_star_01.png"></li>
+                        <li><a href="https://www.aladin.co.kr/events/wevent.aspx?EventId=205465&start=we"><img src="img/new/img_new_ph_03.png" alt="한국문학"></a></li>
+                        <li><img src="img/new/img_new_star_01.png"></li>
+                        <li><a href="https://www.aladin.co.kr/shop/common/wnew.aspx?BranchType=1&start=we"><img src="img/new/img_new_ph_01.png" alt="이번주신간"></a></li>
+                    </ul>
+                </div>
+                <div class="new_backline"></div>
+            </div>
+            
+            
+-->
+ 
+           
+            <div class="swiper-container1">
+            <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=238801667"><img src="img/new/img_new_cover_01.jpg" alt="01"></a></div>
+                    <div class="swiper-slide"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=122278319"><img src="img/new/img_new_cover_02.jpg" alt="02"></a></div>
+                    <div class="swiper-slide"><a href="https://www.aladin.co.kr/search/wsearchresult.aspx?SearchTarget=All&SearchWord=%EC%B0%B8%EC%84%A0+%EB%A7%A4%EB%89%B4%EC%96%BC&x=0&y=0"><img src="img/new/img_new_cover_03.jpg" alt="03"></a></div>
+                    <div class="swiper-slide"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=239400216"><img src="img/new/img_new_cover_04.jpg" alt="04"></a></div>
+                    <div class="swiper-slide"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=115614994&start=slayer"><img src="img/new/img_new_cover_05.jpg" alt="05"></a></div>
+                    <div class="swiper-slide"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=231789373"><img src="img/new/img_new_cover_06.jpg" alt="06"></a></div>
+                    <div class="swiper-slide"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=202646131"><img src="img/new/img_new_cover_07.jpg" alt="07"></a></div>
+                    <div class="swiper-slide"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=238461705"><img src="img/new/img_new_cover_08.jpg" alt="08"></a></div>
+                    <div class="swiper-slide"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=239902935"><img src="img/new/img_new_cover_09.jpg" alt="09"></a></div>
+                    <div class="swiper-slide"><a href="aladin.co.kr/shop/wproduct.aspx?ItemId=15027438"><img src="img/new/img_new_cover_10.jpg" alt="10"></a></div>
+                    <div class="swiper-slide"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=200631109"><img src="img/new/img_new_cover_11.jpg" alt="11"></a></div>
+                    <div class="swiper-slide"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=238286138"><img src="img/new/img_new_cover_12.jpg" alt="12"></a></div>
+                    <div class="swiper-slide"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=238357913"><img src="img/new/img_new_cover_13.jpg" alt="13"></a></div>
+                    <div class="swiper-slide"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=238232211"><img src="img/new/img_new_cover_14.jpg" alt="14"></a></div>
+                    <div class="swiper-slide"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=237756076"><img src="img/new/img_new_cover_15.jpg" alt="15"></a></div>
+                    <div class="swiper-slide"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=88640864"><img src="img/new/img_new_cover_16.jpg" alt="16"></a></div>
+                    <div class="swiper-slide"><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=188999992"><img src="img/new/img_new_cover_17.jpg" alt="17"></a></div>
+            </div>
+             Add Pagination 
+            <div class="swiper-pagination"></div> </div>
+          <script>
+                var swiper = new Swiper('.swiper-container1', {
+                    slidesPerView: 4,
+                    loop:true,
+                    spaceBetween: 100,                
+                    pagination : { // 페이징 설정
+                        el : '.swiper-pagination',
+                        clickable : true, // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
+                    },
+                    navigation : { // 네비게이션 설정
+                        nextEl : '.swiper-button-next', // 다음 버튼 클래스명
+                        prevEl : '.swiper-button-prev', // 이번 버튼 클래스명
+                    },
+                });
+        </script>      
+  <!-- Initialize Swiper -->
+ 
+</section>
+        
+<section>
+            <article></article>
+            <h1 class="sect_03">이 광활한 우주에✦중고책방</h1>
+            <div class="space_left_menu">
+                <ul>
+                    <li><a href="https://www.aladin.co.kr/shop/common/wnew.aspx?BranchType=6&NewType=OffShopOnline">이 광활한 우주점</a></li>
+                    <li><a href="https://www.aladin.co.kr/shop/common/wbest.aspx?BranchType=6&BestType=AladinB2CUsedBest">많이 판매된 중고</a></li>
+                    <li><a href="https://www.aladin.co.kr/shop/common/wnew.aspx?BranchType=6">새로 등록된 상품</a></li>
+                    <li><a href="https://www.aladin.co.kr/shop/wbrowse.aspx?CID=145557">2000원샵</a></li>
+                </ul>
+            </div>
+            <div class="space_right_menu">
+                <ul>
+                    <li><a href="https://www.aladin.co.kr/scm/wmain.aspx?start=main">판매자매니저</a></li>
+                    <li><a href="https://www.aladin.co.kr/shop/usedshop/wc2b_sales.aspx">알라딘에 중고팔기</a></li>
+                    <li><a href="https://www.aladin.co.kr/events/wevent.aspx?EventId=130065&start=main">중고 전문셀러</a></li>
+                </ul>
+            </div>
+            <div class="space_book">
+                <ul>
+                    <li><a href="https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=2443371"><img src="img/space/img_space_01.png" alt="나는 왜 네 생각만하고 살았나"/></a></li>
+                    <li><a href=""><img src="img/space/img_space_02.png" alt="소년이온다"/></a></li>
+                    <li><a href=""><img src="img/space/img_space_03.png" alt="https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=195986044"alt="스파이더맨"/></a></li>
+                    <li><a href="https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=72325326"><img src="img/space/img_space_04.gif" alt="빅뱅"/></a></li>
+                    <li><a href=""><img src="img/space/img_space_05.png" alt="사람은무엇으로사는가"/></a></li>
+                    <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=143318218"><img src="img/space/img_space_06.png" alt="동주에게서 온 편지"/></a></li>
+                    <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=219457765"><img src="img/space/img_space_07.png"alt="천국이내려오다"/ /></a></li>
+                    <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=215323081"><img src="img/space/img_space_08.png" alt="그림수업멤버모집"/></a></li>
+                    <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=238349538"><img src="img/space/img_space_09.png" alt="플로리다"/></a></li>
+                    <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=217678856"><img src="img/space/img_space_10.png" alt="블루엣"/></a></li>
+                    <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=106902217"><img src="img/space/img_space_11.png" alt="펭귄01"/></a></li>
+                    <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=106906964"><img src="img/space/img_space_12.png" alt="펭귄02"/></a></li>
+                    <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=54265333"><img src="img/space/img_space_13.png" alt="펭귄03"/></a></li>
+                    <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=106899842"><img src="img/space/img_space_14.png" alt="펭귄04"/></a></li>
+                    <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=61890365"><img src="img/space/img_space_15.png" alt="펭귄05"/></a></li>
+                    <li><a href=""><img src="img/space/img_space_16.png" alt="GRAPHIC"/></a></li>
+                    <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=240437339"><img src="img/space/img_space_17.png" alt="기억"/></a></li>
+                    <li><a href="https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=3882912"><img src="img/space/img_space_18.png" alt="파도야놀자"/></a></li>
+                    <li><a href="https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=203373"><img src="img/space/img_space_19.png" alt="문학이란무엇인가"/></a></li>
+                    <li><a href="https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=5873459"><img src="img/space/img_space_20.png" alt="전망좋은방"/></a></li>
+                    <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=235964026"><img src="img/space/img_space_21.png" alt="자기만의방"/></a></li>
+                    <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=235964026"><img src="img/space/img_space_22.png" alt="자기만의방"/></a></li>
+                    <li><a href="https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=216766062"><img src="img/space/img_space_23.png" alt="파도가바다의일이라면"/></a></li>
+                </ul>
+            </div>
+            
+</section>
+        
+<section>
+            <div class="article_ebook">
+                <h2>eBook✦전자책</h2>
+            </div>
+            <div class="iphone">
+            <div class="iphone_img"><img src="img/ebook/iphone_test.png"/></div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/ebook/img_ebook_01.jpg"></div>
+                    <div class="swiper-slide"><img src="img/ebook/img_ebook_02.jpg"></div>
+                    <div class="swiper-slide"><img src="img/ebook/img_ebook_03.jpg"></div>
+                    <div class="swiper-slide"><img src="img/ebook/img_ebook_04.jpg"></div>
+                    <div class="swiper-slide"><img src="img/ebook/img_ebook_05.jpg"></div>
+                    <div class="swiper-slide"><img src="img/ebook/img_ebook_06.jpg"></div>
+                    <div class="swiper-slide"><img src="img/ebook/img_ebook_07.jpg"></div>
+                    <div class="swiper-slide"><img src="img/ebook/img_ebook_08.jpg"></div>
+                    <div class="swiper-slide"><img src="img/ebook/img_ebook_09.jpg"></div>
+                    <div class="swiper-slide"><img src="img/ebook/img_ebook_10.jpg"></div>
+                    <div class="swiper-slide"><img src="img/ebook/img_ebook_11.jpg"></div>
+                    <div class="swiper-slide"><img src="img/ebook/img_ebook_12.jpg"></div>
+                    <div class="swiper-slide"><img src="img/ebook/img_ebook_13.jpg"></div>
+                    <div class="swiper-slide"><img src="img/ebook/img_ebook_14.jpg"></div>
+                    <div class="swiper-slide"><img src="img/ebook/img_ebook_15.jpg"></div>
+                    <div class="swiper-slide"><img src="img/ebook/img_ebook_16.jpg"></div>
+                    <div class="swiper-slide"><img src="img/ebook/img_ebook_17.jpg"></div>
+                </div>
+                
+
+	<!-- 네비게이션 버튼 -->
+	<div class="swiper-button-next"></div> 
+<!--	다음 버튼 (오른쪽에 있는 버튼) -->
+	<div class="swiper-button-prev"></div> 
+<!--	이전 버튼 -->
+
+	<!-- 페이징 -->
+	<div class="swiper-pagination"></div>
+            </div>
+           </div> 
+<!--            pc-->
+            <div class="windowviewer"></div>
+            <div class="macviewer"></div>
+<!--            mobile-->
+            <div class="gotoandroid"></div>
+            <div class="applestore"></div>
+            <div class="otherwisegoogleplay"></div>
+        <script>
+            new Swiper('.swiper-container', {
+                pagination : { // 페이징 설정
+                    el : '.swiper-pagination',
+                    clickable : true, // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
+                },
+                navigation : { // 네비게이션 설정
+                    nextEl : '.swiper-button-next', // 다음 버튼 클래스명
+                    prevEl : '.swiper-button-prev', // 이번 버튼 클래스명
+                },
+            });
+        </script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="http://malsup.github.com/jquery.cycle2.js"></script>
+     
+</section>
+<section>
+            <div class="blackback"></div>
+          
+               <div class="audio_book arr_01">
+                   <ul>
+                   <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=209614543"><img src="img/audiobook/img_auidobook_01.png" alt="세계의 호수"><p>세계의 호수</p></a></li>
+                   <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=179180886"><img src="img/audiobook/img_auidobook_02.png" alt="100인의 배우, 우리 문학을 읽다"><p>100인의 배우, 우리 문학을 읽다</p></a></li>
+                   <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=238800675"><img src="img/audiobook/img_auidobook_03.png" alt="하마터면 열심히 살뻔 했다"><p>하마터면 열심히 살뻔 했다</p></a></li>
+                   <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=142321307"><img src="img/audiobook/img_auidobook_04.png" alt="100인의 배우, 우리 문학을 읽다"><p>100인의 배우, 우리 문학을 읽다</p></a></li>
+                       <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=193546454"><img src="img/audiobook/img_auidobook_05.png" alt="아가미"><p>아가미</p></a></li>
+                   </ul>
+               </div>
+                <div class="audio_book_wrap">
+               <br>
+               <p>당신을 위한 특별한 책 이야기, 알라딘 오디오북</p>
+               <span><a href="https://www.aladin.co.kr/search/wsearchresult.aspx?SearchTarget=All&SearchWord=%EC%98%A4%EB%94%94%EC%98%A4%EB%B6%81&x=0&y=0">오디오북 더보기></a></span>
+               <br>
+               </div>
+               <div class="audio_book arr_02">
+                   <ul>
+                   <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=240894943"><img src="img/audiobook/img_auidobook_06.png" alt="마흔으로산다는것"/><p>마흔으로 산다는 것</p></a></li>
+                   <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=240897446"><img src="img/audiobook/img_auidobook_07.png" alt="일단 나부터 실험할게요"/><p>일단 나부터 실험할게요</p></a></li>
+                   <li><a href="https://www.aladin.co.kr/events/wevent.aspx?EventId=206232&start=pbanner"><img src="img/audiobook/img_auidobook_08.png" alt="나의 할머니에게"/><p>나의ㅡ할머니에게</p></a></li>
+                   <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=240896337&start=slayer"><img src="img/audiobook/img_auidobook_09.png" alt="잠시 멈추고 나를 챙겨주세요"/><p>잠시 멈추고 나를 챙겨주세요</p></a></li>
+                   <li><a href="https://audioclip.naver.com/audiobooks/5F140A0161"><img src="img/audiobook/img_auidobook_10.png" alt="행복"/><p>행복</p></a></li>
+                   </ul>
+               </div>
+      <script>
+         //css의 rotate부분은 막고 이 스크립트 부분을 추가해 주세요.
+         //여러개가 같이 도는건 li위치가 겹쳐서 그런게 아닌가 싶습니다.
+     $(function(){
+         var angle=0;
+         $('.arr_01 > ul > li, .arr_02 > ul > li').mouseenter(function(){
+            $(this).find('img').css({'transform':'rotateY(360deg)'});
+         }); 
+         $('.arr_01 > ul > li, .arr_02 > ul > li').mouseleave(function(){
+               $(this).find('img').css({'transform':'rotateY(0deg)'});
+         }); 
+     });
+     </script>
+           
+</section>
+
+<section>
+            <article>
+                
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <span>Editor's pick!</span>
+            </article>
+            <div class="yellowbox"></div>
+            <div class="edit_arr_wrap">
+            <div class="edit_arr">
+                  <a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=237191184"><img src="img/editorspick/img_edit_cover_01.jpg" alt="작은출판사차리는법">
+                      <span># 작고 소박하게, 내가 좋아하는 일을 하고 싶다면</span></a> 
+                  <a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=238415319"><img src="img/editorspick/img_edit_cover_02.jpg" alt="인문학적성장을위한8개의질문">
+                  <span># 우리의 삶은 결국 ‘무엇을 알아야 하는가?’에 대한 질문에서 시작한다. </span></a>
+                  <a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=239873881"><img src="img/editorspick/img_edit_cover_03.jpg" alt="이상하고 자유로운 할머니가 되고싶어">
+                  <span>“사는 것이 무엇을 향해 가는 일인지 조금씩 더 선명해졌으면 좋겠다”</span></a>
+                  <a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=238162190"><img src="img/editorspick/img_edit_cover_04.jpg" alt="오래준비해온대답">
+                  <span># 스마트폰이 없이 떠난 마지막 여행,<br> 
+                  그대여, 그대여어, 너와 나는 태양처럼 젊었다.</span></a>
+                  <a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=234223056"><img src="img/editorspick/img_edit_cover_05.jpg" alt="작고귀여운펠트브로치">
+                  <span># 집에서 제일 바쁜 당신을 위해</span></a>
+                  <a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=173345976&start=slayer"><img src="img/editorspick/img_edit_cover_06.jpg" alt="악의꽃">
+                 <span># 현대 예술을 대표하는 두 거장의 만남<br>
+                     앙리 마티스 x 샤를 보들레르!</span> </a>
+                  <a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=159886782&start=slayer"><img src="img/editorspick/img_edit_cover_07.jpg" alt="채식은 어렵지만, 채소습관">
+                 <span># 나를 돌보는 쉽고 건강한 규칙</span></a> 
+                  <a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=237972893&start=slayer"><img src="img/editorspick/img_edit_cover_08.jpg" alt="숫자가만만해지는책">
+                  <span># 3n년째 수포자인 제가 이해하다니… 이 책은 기적입니다!</span></a>
+                  <a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=237917847"><img src="img/editorspick/img_edit_cover_09.jpg" alt="식물의 책">
+                     <span># 잠시 걸음을 멈춰 고개를 숙이고 땅을 들여다보는 사람만이<br> 
+                      입장할 수 있는 봄꽃 축제다.”</span>
+                  </a>
+                  <a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=170479391&start=slayer"><img src="img/editorspick/img_edit_cover_10.jpg" alt="하루 5분의 책">
+                  <span>#보고, 만지고, 그리고, 주우면서 나무와 친해지는 방법들을 소개합니다.</span></a>
+                  <a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=64542805&start=slayer"><img src="img/editorspick/img_edit_cover_11.jpg" alt="네루다 시 여행">
+                  <span>“네루다의 시는 언어라기보다 그냥 하나의 생동이다.”</span></a>
+                  <a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=231789241&start=slayer"><img src="img/editorspick/img_edit_cover_12.jpg" alt="농담을 싫어하는 사람들">
+                  <span>#농담처럼 흐르는 정지돈의 세계로 초대합니다.</span>
+                  </a>
+               
+            </div>
+           </div>
+</section>
+
+<section>
+         <div class="goods_wrap">
+            <div class="img_goods_01"><img src="img/goods/img_goods_01.png" alt="goods_01"></div>
+            <div class="img_goods_02"><img src="img/goods/img_goods_02.png" alt="goods_02"></div>
+            <div class="img_goods_04"><img src="img/goods/img_goods_04.jpg" alt="goods_04"></div>
+            <div class="img_goods_03"><img src="img/goods/img_goods_03.png" alt="goods_03"></div>
+            
+            <div class="img_goods_05"><img src="img/goods/img_goods_05.jpg" alt="goods_05"></div>
+          </div>
+          
+          
+<!--    <script src="js/aos.js"></script>-->
+<!--
+            <script>
+              AOS.init({
+                    easing: 'ease-in-out-sine'
+              });
+            </script>
+-->
+                <span>나는 내가 너무 애틋하거든,<br>
+                      애틋한 나를 위해<br>
+                      <br>
+                      <a href="">알라딘 굿즈 ></a>
+                      </span>
+                <span>출근으로 흉흉해진 마음을 달랠 땐,<br>
+                      <br>
+                      <a href="">알라딘 굿즈 ></a>
+                      </span>
+               
+     
+</section>
+
+<section>
+            <article>
+                <p></p>
+                <span><a href="https://www.aladin.co.kr/home/wdvdmain.aspx?start=we_tab">음반✦DVD✦BD 더보기 ></a></span>
+            </article>
+            <img class="dvd_ph" src="img/dvdbd/img_ph_01.png" alt="wonderfullife"/>
+            <div id="dvd_rotate">
+            <div class="dvd_arr">
+            <ul>
+             <li><a href="https://movie.naver.com/movie/bi/mi/basic.nhn?code=184571"><span class="dvd_01"></span></a></li>
+             <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=79217083"><span class="dvd_02"></span></a></li>
+             <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19448894"> <span class="dvd_03"></span></a></li>
+             <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=19448894"> <span class="dvd_04"></span></a></li>
+            </ul>
+            </div>
+            </div>
+
+</section>
+
+
+<section>
+            <article><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>                
+
+                <center>"아니야, 난 널 다 이해해"</center>
+            </article>
+            
+            <div class="card_scroll">
+                <div class="card c01">
+                    <p>
+                        우리는 싸움을 제외한 모든 방법을 동원해서<br> 
+                        서로를 견뎠다.<br>
+                        싸움도 일말의 애정이 있을 때나 가능한 일이었다.<br>
+                        나는 그를 미워하지 않았고<br>
+                        그도 나를 미워하지 않았다.<br>
+                        나는 그의 말이나 행동으로<br>
+                        상처받지 않았다.<br>
+                        그도 그러했을 것이다.<br>
+                        하지만 돌이켜 생각해보니 가장 나쁜건<br>
+                        서로에게 나쁘게 대하지도 못하는 그 무지 안에 있었다.<br>
+                    </p>
+                </div>
+                <div class="card c02">
+                    <p>
+                        나는 침묵 주간을 신청했다.<br>
+                        침묵은 나의 헐벗은 마음을 정직하게 보게 했다.<br>
+                        사랑받고 싶은 마음,<br>
+                        누군가와 깊이 결합하여<br>
+                        분리되고 싶지 않은 마음,<br>
+                        잊고 싶은 마음, 잊고 싶지 않은 마음,<br>
+                        침묵하던 눈과 입.<br>
+                        검고 푸른 피부.<br>
+                        내게서 고개를 돌릴 때의<br>
+                        그 자연스럽지 않던 몸짓.<br>
+                    </p>
+                </div>
+                <div class="card c03">
+                   <p>
+                        끝까지 그를 이해하지 못하는 내 단순함.<br>
+                        그 위로 흐르는 시간.<br>
+                        단절.<br>
+                        그 모든 것들,<br>
+                        얼음 속으로 떨어진다.<br>
+                        내 적막한 마음에 함께 있어줘서 고마웠어.<br>
+                        한지, 네가 앞으로 살아갈 시간에<br>
+                        축복이 가득하길.<br>
+                        망각의 축복을,<br>
+                        순간순간마다 존재할 수 있는<br>
+                        힘을 낼 수 있기를.<br>
+                   </p>
+                </div>
+            </div>
+            <div class="writter_profile"></div>
+</section>
+        
+    </div>
+      <div class="footer"></div>
+    </div>
+    
+    <script>
+        $(document).ready(function(){
+           $(".header").load("html/header.html");
+           $(".footer").load("html/footer.html");
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            
+       
+
+
+           var ht = $(window).height();
+           var button = $('#menu > li');
+            
+                 //mousewheel.min.js를 define한 경우
+            //box 위에서 마우스 휠을 움직이면
+            
+           $(".box").on("mousewheel", function(event, delta){ //마우스 휠 올렸을때
+               console.log("aaa");
+              if (delta > 0) { 
+                  //변수 prev에 현재 휠을 움직인 section에서 이전 section의 offset().top 위치 저장
+                  try{
+                      var prev = $(this).prev().offset().top;
+                  } catch(e){}
+                  //문서 전체를 prev에 저장된 위치로 이동
+                  $("html,body").stop().animate({"scrollTop":prev},1000,"easeOutBounce");
+              } else if (delta < 0) { 
+                   //변수 next에 현재 휠을 움직인 section에서 다음 section의 offset().top위치 저장
+                   try {
+                       var next = $(this).next().offset().top;}
+                    catch(e){} //문서 전체를 next에 저장된 위치로 이동
+                  $("html,body").stop().animate({"scrollTop":next},1000);
+              }
+           }); 
+            
+              button.on({
+                click:function(){
+                    var tg = $(this);
+                    var i = tg.index();
+                    button.removeClass('on');
+                    tg.addClass('on');
+                   
+                }
+            });
+            
+            $(window).on("scroll",function(){
+//               변수 ht에 높이값 설정
+               var ht = $(window).height();
+                
+                var scroll = $(window).scrollTop();
+            
+                if(scroll>=ht*0 && scroll <ht*1){
+                    $("#menu li").removeClass();
+                    $("#menu li").eq(0).addClass("on");
+                }
+                if(scroll>=ht*1 && scroll <ht*2){
+                    $("#menu li").removeClass();
+                    $("#menu li").eq(1).addClass("on");
+                }
+                if(scroll>=ht*2 && scroll <ht*3){
+                    $("#menu li").removeClass();
+                    $("#menu li").eq(2).addClass("on");
+                }
+                if(scroll>=ht*3 && scroll <ht*4){
+                    $("#menu li").removeClass();
+                    $("#menu li").eq(3).addClass("on");
+                }
+                if(scroll>=ht*4 && scroll <ht*5){
+                    $("#menu li").removeClass();
+                    $("#menu li").eq(4).addClass("on");
+                }
+                if(scroll>=ht*5 && scroll <ht*6){
+                    $("#menu li").removeClass();
+                    $("#menu li").eq(5).addClass("on");
+                }
+                if(scroll>=ht*6 && scroll <ht*7){
+                    $("#menu li").removeClass();
+                    $("#menu li").eq(6).addClass("on");
+                }
+                if(scroll>=ht*7 && scroll <ht*8){
+                    $("#menu li").removeClass();
+                    $("#menu li").eq(7).addClass("on");
+                }
+                if(scroll>=ht*8 && scroll <ht*9){
+                    $("#menu li").removeClass();
+                    $("#menu li").eq(8).addClass("on");
+                }
+            });            
+            
+            
+            $("section").height(ht);
+            
+            $(window).on("resize",function(){
+               var ht = $(window).height();
+                $("section").height(ht);
+            });
+            
+            $("section").on("mousemove",function(e){
+                var posX = e.pageX;
+                var posY = e.pageY;
+//               1st 
+                $(".p11").css({"right":20-(posX/30),"bottom":20-(posY/30) });
+                $(".p12").css({"right":130+(posX/20),"bottom":-40+(posY/20) });
+                $(".p13").css({"right":20-(posX/30),"bottom":20-(posY/20) });
+//               2nd 
+                $(".p21").css({"right":-180-(posX/30),"bottom":-480-(posY/30) });
+                $(".p22").css({"right":130+(posX/50),"bottom":-40+(posY/50) });
+//               3rd 
+                $(".p31").css({"right":290-(posX/30),"bottom":30-(posY/30) });
+                $(".p32").css({"right":110+(posX/20),"bottom":-270+(posY/20) });
+                $(".p33").css({"right":-70-(posX/30),"bottom":-130+(posY/20) });
+//               4rd 
+                $(".p41").css({"right":20-(posX/30),"bottom":-120-(posY/30) });
+                $(".p42").css({"right":0+(posX/20),"bottom":-180+(posY/20) });
+            });
+            
+            $("#menu li").on("click",function(e){
+               e.preventDefault();
+                var ht = $(window).height();
+                var i = $(this).index();
+                var nowTop = i*ht;
+                
+                $("html,body").stop().animate({"scrollTop":nowTop},1000);
+            });
+       
+             
+            
+//editor's pick script
+        // moveType (0:left / 1:right) 
+var moveType = 0; 
+// 이동시간간격 3초 
+var moveSpeed = 3000; 
+// 움직이는 작업중 다시 명령 받지 않음 
+var moveWork = false; 
+// 일시정지 flag 
+var movePause = false; 
+function imgMove(){ 
+    if(moveWork==false){ 
+       // 0d\일경우 left방향 
+      if(moveType==0){ 
+         // 맨처음 이미지의 폭 
+         var aWidth = $(".edit_arr > a:first").width(); 
+         // 롤링마지막에 맨처음의 a태그 추가 
+         $(".edit_arr").append("<a href=\""+$(".edit_arr>a:first").attr("href")+"\">" + $(".edit_arr>a:first").html()+ "</a>"); 
+         // 맨처음이미지를 왼쪽으로 이동시킨다. 
+         $(".edit_arr>a:first").animate({marginLeft:-aWidth},{duration:moveSpeed,step:function(){ 
+         // 이동중 만약 일시정지 flag가 true라면 
+         if(movePause==true){ 
+            // 이동을 멈춘다 
+            $(this).stop(); 
+         } 
+         },complete:function(){ 
+         // 이동을 마친후 첫번째 a태그를 지워버린다 
+         $(this).remove(); 
+         // 이미지 움직이는것을 다시 실행 
+         imgMove(); 
+      }}); 
+      }else{ 
+      // 마지막 a태그의 폭 
+       var aWidth = $(".edit_arr>a:last").width(300); 
+       // a태그 앞에 마지막의 a태그를 생성한다 단 스타일은 마지막 a태그의 폭만큼 빼준다 
+       //$("<a href=\"" + $(".edit_arr>a:last").attr("href")+ "\" style=\"margin-left:-" + aWidth + "px\">" + $(".edit_arr>a:last").html()+ "</a>").insertBefore(".edit_arr>a:first") 
+       // 맨처음 a태그의 margin-left를 다시 0으로 맞춰준다. 
+      $(".edit_arr>a:first").animate({marginLeft:0},{duration:moveSpeed,step:function(){ 
+       // 이동중 만약 일시정지 flag가 true라면 
+       if(movePause==true){ 
+          // 이동을 멈춘다 
+          $(this).stop(); 
+       } 
+       },complete:function(){ 
+       // 이동을 마친후 마지막 a태그를 지워버린다 
+       $(".edit_arr>a:last").remove(); 
+       // 이미지 움직이는것을 다시 실행 
+       imgMove(); 
+    }}); 
+ } 
+ } 
+ }        
+            
+            
+ function goMove(){ 
+    // 일시정지가 풀려있을 경우를 대비하여 일시정지를 풀러준다 
+    movePause=false; 
+    // 0d\일경우 left방향 
+    if(moveType==0){ 
+       imgMove(); 
+       }else{ 
+       $(".edit_arr >a:first").animate({marginLeft:0},{duration:moveSpeed,step:function(){ 
+       // 이동중 만약 일시정지 flag가 true라면 
+       if(movePause==true){ 
+          // 이동을 멈춘다 
+          $(this).stop(); 
+      } 
+       },complete:function(){ 
+      // 이동을 마친후 마지막 a태그를 지워버린다 
+      //$(".RollDiv > div > a:last").remove(); 
+      // 이미지 움직이는것을 다시 실행 
+      imgMove(); 
+   }}); 
+}
+   
+}
+imgMove(); 
+//editor's pick script           
+
+            
+// bestseller script
+            $('#nav1>ul>#smsBtn').click(function(){
+               $('#image').removeClass().addClass('sms');
+               $('#nav1>ul>li>a').removeClass();
+               $('#smsBtn>a').addClass('on');
+               $('.firstph>ul>li').removeClass().eq(0).addClass('onn');
+              
+               
+                
+            }); 
+             
+            $('#nav1>ul>li').click(function(){
+               var num = $(this).index();
+                $('.right_txt>p>span').text(num+1);
+       
+                
+            });
+          $('#nav1>ul>#difleBtn').click(function(){
+               $('#image').removeClass().addClass('difle');
+               $('#nav1>ul>li>a').removeClass();
+               $('#difleBtn>a').addClass('on');
+               $('.firstph>ul>li').removeClass().eq(1).addClass('onn');
+          }); 
+             
+          $('#nav1>ul>#rootengBtn').click(function(){
+               $('#image').removeClass().addClass('rooteng');
+               $('#nav1>ul>li>a').removeClass();
+               $('#rootengBtn>a').addClass('on');
+               $('.firstph>ul>li').removeClass().eq(2).addClass('onn');
+            }); 
+             
+          $('#nav1>ul>#pikachuBtn').click(function(){
+               $('#image').removeClass().addClass('pikachu');
+               $('#nav1>ul>li>a').removeClass();
+               $('#pikachuBtn>a').addClass('on');
+               $('.firstph>ul>li').removeClass().eq(3).addClass('onn');
+          }); 
+             
+            $('#nav1>ul>#librBtn').click(function(){
+               $('#image').removeClass().addClass('libr');
+               $('#nav1>ul>li>a').removeClass();
+               $('#librBtn>a').addClass('on');
+                $('.firstph>ul>li').removeClass().eq(4).addClass('onn');
+            }); 
+             
+          $('#nav1>ul>#pagwaBtn').click(function(){
+               $('#image').removeClass().addClass('pagwa');
+               $('#nav1>ul>li>a').removeClass();
+               $('#pagwaBtn>a').addClass('on');
+               $('.firstph>ul>li').removeClass().eq(5).addClass('onn');
+            }); 
+             
+          $('#nav1>ul>#makryeBtn').click(function(){
+               $('#image').removeClass().addClass('makrye');
+               $('#nav1>ul>li>a').removeClass();
+               $('#makryeBtn>a').addClass('on');
+               $('.firstph>ul>li').removeClass().eq(6).addClass('onn');
+            }); 
+            
+             $('#nav1>ul>#evolveBtn').click(function(){
+               $('#image').removeClass().addClass('evolve');
+               $('#nav1>ul>li>a').removeClass();
+               $('#evolveBtn>a').addClass('on');
+               $('.firstph>ul>li').removeClass().eq(7).addClass('onn');
+            }); 
+             
+          $('#nav1>ul>#sapiensBtn').click(function(){
+               $('#image').removeClass().addClass('sapiens');
+               $('#nav1>ul>li>a').removeClass();
+               $('#sapiensBtn>a').addClass('on');
+               $('.firstph>ul>li').removeClass().eq(8).addClass('onn');
+            }); 
+             
+          $('#nav1>ul>#dokioBtn').click(function(){
+               $('#image').removeClass().addClass('dokio');
+               $('#nav1>ul>li>a').removeClass();
+               $('#dokioBtn>a').addClass('on');
+               $('.firstph>ul>li').removeClass().eq(9).addClass('onn');
+            }); 
+             
+          $('#nav1>ul>#newworldBtn').click(function(){
+               $('#image').removeClass().addClass('newworld');
+               $('#nav1>ul>li>a').removeClass();
+               $('#newworldBtn>a').addClass('on');
+               $('.firstph>ul>li').removeClass().eq(10).addClass('onn');
+            }); 
+            
+        });
+      
+    </script>
+</body>
+</html>
