@@ -436,20 +436,29 @@
         margin-top: 200px;
         min-width: 410px;
         height: 380px;
-        border-radius: 16px;
+        border-radius: 10px;
         box-shadow: -1rem 0 3rem #333;
         display: flex;
         flex-direction: column;
         padding: 1.5rem;
         transition: 0.2s;
     }
-       .card  p{text-shadow: 1px 1px 1px #444; font-family: serif;}
-        .c01 {filter: brightness(0.3); background: url(../img/cardreview/img_card_01.gif)}
-        .c02 {filter: brightness(0.3); background: url(../img/cardreview/img_card_02.gif)}
-        .c03 {filter: brightness(0.3); background: url(../img/cardreview/img_card_03.gif); }
-        .c04 {filter: brightness(0.3); background: url(../img/cardreview/img_card_04.gif);background-position: center}
-        .c05 {filter: brightness(0.3); background: url(../img/cardreview/img_card_05.gif);}
-        .c06 {filter: brightness(0.3); background: url(../img/cardreview/img_card_06.gif);}
+       .card  p{text-shadow: 1px 1px 1px #444; font-family: 'Nanum Myeongjo', serif; font-weight: 400; display: none;
+padding: 10px;}
+.c01 p{background:none;}
+.c02 p{background:none; padding: 20px 10px;}
+.c03 p{background: rgba(0,0,0,0.4);padding: 20px 10px; }
+.c04 p{background:rgba(0,0,0,0.2);padding: 10px;font-size: 12px;}
+.c05 p{background: rgba(0,0,0,0.4); }
+.c06 p{background:none;}
+
+        .c01 { background: url(../img/cardreview/img_card_01.gif)}
+        .c02 { background: url(../img/cardreview/img_card_02.gif)}
+
+        .c03 { background: url(../img/cardreview/img_card_03.gif); }
+        .c04 { background: url(../img/cardreview/img_card_04.gif);background-position: center}
+        .c05 { background: url(../img/cardreview/img_card_05.gif);}
+        .c06 { background: url(../img/cardreview/img_card_06.gif);}
         .card img{width: 20px; position: absolute;  }
         .c04 img{width: 23px;}
         .card .date {color: whitesmoke; line-height: 60px;}
@@ -505,9 +514,14 @@
         filter: brightness(1);
     }
 
+    .card:hover p{display: block;}
+
     .card:hover~.card{
         transform: translateX(130px);
+        filter: brightness(0.5);
     }
+   
+
 
 
 
