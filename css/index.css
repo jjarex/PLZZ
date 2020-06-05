@@ -444,12 +444,12 @@
         transition: 0.2s;
     }
        .card  p{text-shadow: 1px 1px 1px #444; font-family: serif;}
-        .c01 {filter: brightness(0.7); background: url(../img/cardreview/img_card_01.gif)}
-        .c02 {filter: brightness(0.7); background: url(../img/cardreview/img_card_02.gif)}
-        .c03 {filter: brightness(0.7); background: url(../img/cardreview/img_card_03.gif); }
-        .c04 {filter: brightness(0.7); background: url(../img/cardreview/img_card_04.gif);background-position: center}
-        .c05 {filter: brightness(0.7); background: url(../img/cardreview/img_card_05.gif);}
-        .c06 {filter: brightness(0.7); background: url(../img/cardreview/img_card_06.gif);}
+        .c01 {filter: brightness(0.3); background: url(../img/cardreview/img_card_01.gif)}
+        .c02 {filter: brightness(0.3); background: url(../img/cardreview/img_card_02.gif)}
+        .c03 {filter: brightness(0.3); background: url(../img/cardreview/img_card_03.gif); }
+        .c04 {filter: brightness(0.3); background: url(../img/cardreview/img_card_04.gif);background-position: center}
+        .c05 {filter: brightness(0.3); background: url(../img/cardreview/img_card_05.gif);}
+        .c06 {filter: brightness(0.3); background: url(../img/cardreview/img_card_06.gif);}
         .card img{width: 20px; position: absolute;  }
         .c04 img{width: 23px;}
         .card .date {color: whitesmoke; line-height: 60px;}
