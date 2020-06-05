@@ -427,7 +427,13 @@
         right:20px;
         top:0;
     }
-	.banner ul li {float: left; width: 480px; height: 490px; margin:10px; padding:0;border-radius: 50%;
+	.banner ul li {
+        -webkit-border-radius 
+        -moz-border-radius
+        -ms-border-radius
+        -o-border-radius
+            border-radius 
+        float: left; width: 480px; height: 490px; margin:10px; padding:0;border-radius: 50%;
     overflow: hidden;}
     .banner ul li img {
         display: block;
@@ -439,7 +445,6 @@
         vertical-align: middle;
         width:500px;
 	    height:500px;
-        
     }
 button {display: none;}
 
