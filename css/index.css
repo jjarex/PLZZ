@@ -70,7 +70,6 @@
         section{width: :100%; height: 700px; position: relative; background-size: cover; background-position: right center;
                 background-attachment: fixed; overflow: hidden;}
 /*              배경고정되고 위에만 움직인거같은 느낌*/
-        section:nth-child(1) {background-image: url(../img/bg/bg_01.png);}
         section:nth-child(2) {background-image: url(../img/bg/bg2.jpg);} 
         section:nth-child(3) {background-image: url(../img/bg/bg3.jpg);}
         section:nth-child(4) {background-image: url(../img/bg/bg4.jpg);}
@@ -182,23 +181,26 @@
 /*section new*/
  .swiper-container1{
       width: 100%;
-      height: 800px;
+      height: 798.5px;
      position: absolute; top: 0;
-     margin-top: 41.5px;
+     margin-top: 90px;
     }
  .swiper-slide {
       text-align: center;
       font-size: 18px;
         background: #fff;}
 
-.new_backline {width: 100%; height: 174px; border-top: 6px solid #000; overflow: hidden; background: #fff; }
-.new_backline span{font-size: 100px;}
+.new_backline {width: 100%; height: 193px; border-top: 6px solid #000; overflow: hidden; background: #fff; padding-top: 20px; }
+.new_backline span{font-size: 100px; color: gainsboro;}
+.new_backline:nth-child(2) {background: #777;}
+.new_backline:nth-child(3) {background: #666;}
+.new_backline:nth-child(4) {background: #888;}
 .new_backline>ul>li {float: left; margin: 20px;}
 .new_book_arr {position: absolute; width: 100%; height: 500px; top: 182px; }
 .new_book_arr {width: 100%; height: 500px; overflow: hidden;}
 .new_book_arr img{height: 522px; margin-left: 100px;}
 .swiper-pagination{position:absolute;text-align:center;-webkit-transition:.3s opacity;-o-transition:.3s opacity;transition:.3s opacity;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);z-index:10}
-.swiper-slide>a img{height: 527.8px; box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .2);}
+.swiper-slide>a img{height: 584px; box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .2);}
 
 /*section space*/
 .space_left_menu {position: absolute; top: 50px; left: 50px;}
@@ -385,6 +387,7 @@
 .edit_arr span{display:inline-table; transform: rotate(90deg); position: relative;
                 margin: 0 -100px;
                text-align: left; width: 400px; height: 30px; right: 80px; top: -350px;}
+.edit_arr>a>span {font-weight: 500;}
 
 
 
@@ -404,19 +407,41 @@
 
 
 /*section dvd*/
-#dvd_rotate {width: 2000px; height: 1000px; transform: rotate(90deg); position: relative; right: 0px;}
-.dvd_arr_wrap {position: absolute; width: 100%; top: 135px; height: 700px; overflow:hidden; }
-.dvd_arr {position: absolute;  width: 100%; height: 500px; left: -170px; display: block; overflow: hidden;
-}
-.dvd_arr a {height: 550px; width: 550px;  margin: 50px; border-radius: 50%;}
-.dvd_arr span {width: 500px; height: 500px;  transform: rotate(-90deg); border-radius: 50%; overflow: hidden; display: inline-block; overflow: hidden;}
-.dvd_01 { border-radius: 50%; background: url(../img/dvdbd/img_dvd_01.gif) center;}
-.dvd_02 { border-radius: 50%; background: url(../img/dvdbd/img_dvd_02.gif) center;}
-.dvd_03 { border-radius: 50%; background: url(../img/dvdbd/img_dvd_03.gif) center;}
-.dvd_04 { border-radius: 50%; background: url(../img/dvdbd/img_dvd_04.gif) center;}
-
-
-
+.dvd_cp {position: absolute; left: 190px; top: 350px;}
+.dvd_contents {
+        width:600px;
+        left: 60%;
+        height: 100%;
+        position: relative;
+        overflow:hidden; 
+    }
+	.banner {
+        width:600px; /*340*3 3개씩 보여주기 위함 */
+        height:1500px;
+        position: relative;
+        overflow:hidden; 
+        
+    }
+	.banner ul {
+        position:absolute;
+        right:20px;
+        top:0;
+    }
+	.banner ul li {float: left; width: 480px; height: 490px; margin:10px; padding:0;border-radius: 50%;
+    overflow: hidden;}
+    .banner ul li img {
+        display: block;
+        float:left;
+        position: relative;
+        left: -5px;
+        top:-5px;
+        align-items: center;
+        vertical-align: middle;
+        width:500px;
+	    height:500px;
+        
+    }
+button {display: none;}
 
 
 
@@ -452,7 +477,7 @@ padding: 10px;}
 .c03 p{background: rgba(0,0,0,0.4);padding: 20px 10px; }
 .c04 p{background:rgba(0,0,0,0.2);padding: 10px;font-size: 12px;}
 .c05 p{background: rgba(0,0,0,0.4); }
-.c06 p{background:none;}
+.c06 p{background: rgba(0,0,0,0.4);}
 
         .c01 { background: url(../img/cardreview/img_card_01.gif)}
         .c02 { background: url(../img/cardreview/img_card_02.gif)}
