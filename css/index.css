@@ -39,30 +39,31 @@
 
         /*menu*/
         #menu { position: relative; left: 0px; }
-        #menu a{display: block; width: 200px; height: 40px; font-family: "Righteous"; font-size: 12px;margin-right: 10px;
+        #menu a{display: block; width: 200px; height: 40px; font-family: "Righteous"; font-size: 12px;padding: 5px 10px 0 0;
                 color: #000; text-align: right; overflow: hidden; box-sizing: border-box; border-top: 1px solid #111;
                 opacity: 0.8; transition: all 0.5s;}
         #menu li:hover a{font-size: 14px; opacity: 1;}
         #menu li.on a{font-size: 14px; opacity: 1;}
-        
-        #menu li:nth-child(1):hover a {color: #d4164c; border-color: #d4164c; }
-        #menu li:nth-child(2):hover a {color: #333; border-color: #333; }
-        #menu li:nth-child(3):hover a {color:#005a89; border-color:#005a89;}
-        #menu li:nth-child(4):hover a {color: #005a89; border-color: #005a89; }
-        #menu li:nth-child(5):hover a {color: #d4164c; border-color: #d4164c;}
-        #menu li:nth-child(6):hover a {color: #ffec6a; border-color: #ffec6a; }
-        #menu li:nth-child(7):hover a {color: #005a89; border-color: #005a89; }
-        #menu li:nth-child(8):hover a {color: #005a89; border-color: #005a89; }
-        #menu li:nth-child(9):hover a {color: #005a89; border-color: #005a89; }
+
+        #menu li:nth-child(1):hover a {background:#d4164c; color: #fff; border-color: #fff; }
+        #menu li:nth-child(2):hover a {color: #fff; border-color: #fff; background: red; }
+        #menu li:nth-child(3):hover a {color:#fff; border-color:#fff; background: #021a45;}
+        #menu li:nth-child(4):hover a {color:#fff; border-color: #4e4e4b; background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); }
+#menu li:nth-child(5):hover a {background: #974f4f;color:#fff;}
+            
+        #menu li:nth-child(6):hover a {background: #f3a811;color: #fff; border-color:  #005a89; }
+        #menu li:nth-child(7):hover a {color: #fff; border-color: #fff; background: #2e4c0f; }
+        #menu li:nth-child(8):hover a {color: #fff; border-color: #fff; background: #248dcf }
+        #menu li:nth-child(9):hover a {color: #fff; border-color: #fff; background: linear-gradient(90deg, rgba(73,73,73,1) 33%, rgba(36,36,36,1) 100%); }
         
         #menu li:nth-child(1).on a {color: #d4164c; border-color: #d4164c; }
         #menu li:nth-child(2).on a {color: #333; border-color:#333; }
         #menu li:nth-child(3).on a {color: #005a89; border-color:#005a89; }
-        #menu li:nth-child(4).on a {color: #005a89; border-color: #005a89; }
-        #menu li:nth-child(5).on a {color: #d4164c; border-color: #d4164c; }
+        #menu li:nth-child(4).on a {color: #4e4e4b; border-color:  #4e4e4b; }
+        #menu li:nth-child(5).on a {color: #d4164c; border-color: #974f4f;}
         #menu li:nth-child(6).on a {color: #005a89; border-color: #005a89; }
-        #menu li:nth-child(7).on a {color: #005a89; border-color: #005a89; }
-        #menu li:nth-child(8).on a {color: #ffec6a; border-color: #ffec6a; }
+        #menu li:nth-child(7).on a {color:#2e4c0f; border-color: #2e4c0f; }
+        #menu li:nth-child(8).on a {color:  #248dcf; border-color:  #248dcf; }
         #menu li:nth-child(9).on a {color: #005a89; border-color: #005a89; }
       
         /*layout*/
@@ -183,20 +184,21 @@
       width: 100%;
       height: 800px;
      position: absolute; top: 0;
-     margin-top: 45px;
+     margin-top: 41.5px;
     }
  .swiper-slide {
       text-align: center;
       font-size: 18px;
         background: #fff;}
 
-.new_backline {width: 100%; height: 170px; border-top: 6px solid #000; overflow: hidden;}
+.new_backline {width: 100%; height: 174px; border-top: 6px solid #000; overflow: hidden; background: #fff; }
+.new_backline span{font-size: 100px;}
 .new_backline>ul>li {float: left; margin: 20px;}
-.new_book_arr {position: absolute; width: 100%; height: 510px; top: 182px; }
-.new_book_arr {width: 100%; height: 522px; overflow: hidden}
+.new_book_arr {position: absolute; width: 100%; height: 500px; top: 182px; }
+.new_book_arr {width: 100%; height: 500px; overflow: hidden;}
 .new_book_arr img{height: 522px; margin-left: 100px;}
 .swiper-pagination{position:absolute;text-align:center;-webkit-transition:.3s opacity;-o-transition:.3s opacity;transition:.3s opacity;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);z-index:10}
-
+.swiper-slide>a img{height: 527.8px; box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .2);}
 
 /*section space*/
 .space_left_menu {position: absolute; top: 50px; left: 50px;}
