@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WWF redesign</title>
+    <script src="js/jquery-3.5.0.min.js"></script>
+    
+    <style>
+        *{margin: 0; padding: 0;
+          font-family: "NanumSquareOTF";}
+        li{list-style: none;}
+        #wrap{width: 100%; margin: 0 auto; margin-top: 0; position: relative;}
+        a {text-decoration: none; color: white; }
+        p {font-size: 20px;line-height: 32px;}
+        p1 {color: #ff6701}
+        p2 {font-size: 18px; display: inline; vertical-align: top;}
+        p3 {font-size: 23px;  line-height: 55px;}
+        p4 {font-size: 22px; display: inline; text-align: left; line-height: 40px;}
+        p5 {font-size: 19px; color: darkgrey; display: inline;}
+        p6 {font-size: 24px; display: block; line-height: 40px;}
+        h2 {display: inline; font-size: 27px; line-height: 45px}
+        .dn_box{width: 160px; height: 40px; color: white; background: #ff6701;
+                vertical-align: middle; font-size: 25px; padding-top: 15px;
+                margin: 40px; text-align: center;
+                box-shadow: 2px 2px 8.1px 0.9px rgba(0, 0, 0, 0.2);}
+/*        header*/
+        #header {width: 100%; height: 1100px; position: absolute;
+                top: 0px; color: snow; text-align: center;}
+        #logo{width: 186px; height: 209px; position: absolute; top: 0px; left: 70px;
+              background: url(img/header/logo.png); background-position: 0 -45px;
+              z-index: 999;}
+        #slide {width: 100%; height: 1100px; top: 0; position: absolute;
+                background: url(img/header/slide/slide02.jpg);}
+        #slide>h1 {margin-top:470px;}
+        #nav {position: relative; width: 80%; margin: 50px 0 0 300px;}
+        #nav>ul>li {float: left; width: 15%; font-size: 25px; font-weight: bold;  
+                    font-size: 27px;border-left: 1px solid white;}
+        #nav>ul>li>ul{display:none;}
+        #nav>ul>li:hover {color: #ff6701;}
+        #nav>ul>li:hover ul{display: block;color: snow; background:rgba(0, 0, 0, 0.3); text-align: left; line-height: 50px; 
+                            margin-top: 10px; width: 100%; font-size: 25px;}
+        #nav>ul>li>ul>li {padding: 5px 5px 5px 25px;}
+        #nav>ul>li>ul>li:hover {background:rgba(0, 0, 0, 0.4);}
+        .mypage {border: 1px solid snow; padding: 10px; position: absolute;
+                right: 20px; top: -10px; }
+        .mypage:hover {animation: myani 110s;  background: rgba(255, 103, 1, 0.9);}
+        .mypage:hover a{color: white;}
+        
+/*        contents*/
+        #contents{width: 1900px; margin: 0 auto; text-align: center;}
+        #ourocean{width: 1900px; height: 2750px;margin: 0 auto;
+                    }
+        #ourocean>.dn_box {position: absolute;  left: 30%; top: 1480px;}
+        .oc { position: absolute;text-align: left;  
+              left: 30%; top: 1361px; width: 400px; height: 300px;}
+        .oc>p{font-size: 25px;  line-height: 40px;}
+        .oc_box1{position: absolute; left: 30%; top: 1800px; z-index: 100;
+                 background: url(img/contents/ourocean/marinpoulltion.gif);
+                 width: 538px; height: 800px; 
+                 box-shadow: 3px 3px 4.88px 0.92px rgba(0, 0, 0, 0.2);
+                }
+        .oc_box2{position: absolute; left: 40%; top: 1000px; width: 693px;
+                 background: url(img/contents/ourocean/oc_box02.png);
+                 height: 858px; z-index: 50;
+                 box-shadow: 3px 6px 8.1px 0.9px rgba(0, 0, 0, 0.25);
+                }
+        .oc_box3{position: absolute; 
+                 background: url(img/contents/ourocean/oc_box03.png);   
+                 left: 50%; top: 1648px; 
+                 width: 900px; height: 1200px; 
+                 box-shadow: 0px 4px 8.01px 0.99px rgba(0, 0, 0, 0.21);
+                }
+        
+        #polarbear{width: 1580px; height: 417px;margin: 0 auto; 
+                   background: url(img/contents/polarb/polarb.png);
+                   background-position: 0 -70px;
+                   color: white; padding: 200px 0px 0px 180px; text-align: left;
+                }
+        #polarbear>p{font-size: 25px; text-align: left; line-height: 40px;}
+        #wwfact{width: 1900px; height: 1000px; margin: 0 auto; padding-top: 70px;}
+        .intro_box{width: 760px; height: 180px; position: relative;
+                   background: url(img/contents/act/intro_box.png);
+                   margin: 0 auto; margin-top: 20px;}
+        .first {position: absolute; top: 57px; left: 140px;}
+        .second {position: absolute; top: 80px; right: 120px;}
+        #act{width: 80%; margin: 0 auto;padding-top: 50px; }
+        .act {float: left; width: 28%; margin: 0px 2.5% 0 2.5%;}
+        #wwfkorea{width: 1900px; height: 500px; margin: 0 auto; padding-top: 50px;
+                }
+        #k_act{width: 80%; margin: 0 auto;padding-top: 20px;}
+        .k_act {float: left; width: 28%; margin: 30px 2.5% 0 2.5%;}
+        .k_act .k01{width: 300px; height: 150px; margin: 0 auto;
+                   background: url(img/contents/k_act/k_act_icon.png); 
+                   background-position: -10px -5px; }
+        .k_act .k02{width: 160px; height: 150px; margin: 0 auto;
+                   background: url(img/contents/k_act/k_act_icon.png); 
+                   background-position: -350px 0px; }
+        .k_act .k03{width: 300px; height: 150px; margin: 0 auto;
+                   background: url(img/contents/k_act/k_act_icon.png); 
+                   background-position: -520px 0px; }
+        #sns {width: 90%; height: 1025px; margin: 0 auto; 
+            background: #f8f7f5;position: relative; text-align: left; }
+        .snstxt {padding: 100px 0px 0px 200px;}
+        #earthhour{position: absolute; left: 200px; bottom: 110px;width: 329px;height: 550px; 
+                    background: url(img/contents/sns/earthhour.png); 
+                    }
+        #vegan{position: absolute; left:715px; bottom: 110px;width: 329px;height: 470px; 
+                 background: url(img/contents/sns/vegan.png); 
+                }
+        #pps{position: absolute; right: 200px; bottom: 110px;width: 329px;height: 650px;
+             background: url(img/contents/sns/pps.png); 
+            }
+        .vrsc{position: absolute; transform: rotate(90deg);}
+        .vrsc01{position: absolute; left: 346px; top: 478px; transform: rotate(90deg);}
+        .vrsc02{position: absolute; left: 940px; top: 484px; transform: rotate(90deg);}
+        .vrsc03{position: absolute; right: 30px; top: 310px;transform: rotate(90deg);}
+        
+        #news{width: 1000px; height: 200px;margin: 0 auto;padding: 90px;}
+        .news{text-align: left; line-height: 40px; margin-top: 50px;}
+        
+        #d_notice{width: 820px;height: 400px;margin: 0 auto; text-align: left;
+                line-height: 31px; font-size: 20px;padding-top: 50px;
+                margin-bottom: 300px;}
+        #contents:after{content: ''; display: block; clear: both;}
+        
+/*        footer*/
+        #footer {width: 1900px; height: 330px; background: #494949; color: snow;
+                display: block; position: absolute; bottom: 0px; text-align: left}
+        .f_logo{width:186px; height:209px; 
+                background: url(img/footer/footer_logo.png);
+                margin: 40px 40px 30px 100px; float: left;}
+        #footer hr{margin: 10px;}
+        .f_article{margin: 40px; line-height: 27px;}
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+           <div id="logo"></div>
+            <div id="slide">
+                <h1>호주산불 복원기금 기부</h1><br>
+                <h2>야생동물의 긴급 구조와 치료 및 서식지 복원에 도움이 필요합니다</h2>
+            </div>
+            
+            <div id="nav">
+                <ul>
+                    <li>WWF
+                    <ul>
+                        <li><a href="#">기관소개</a></li>
+                        <li><a href="#">WWF history</a></li>
+                        <li><a href="#">WWF-Korea</a></li>
+                        <li><a href="#">함꼐하는 사람들</a></li>
+                        <li><a href="#">연례보고서</a></li>
+                        <li><a href="#">채용</a></li>
+                    </ul>
+                    </li>
+                    <li>캠페인
+                        <ul>
+                            <li><a href="#">멸종위기종 보전</a></li>
+                            <li><a href="#">생태발자국 줄이기</a></li>
+                            <li><a href="#">Earth Hour</a></li>
+                            <li><a href="#">Our Planet</a></li>
+                        </ul>
+                    </li>
+                    <li>참여하기
+                        <ul>
+                            <li><a href="#">행사참여</a></li>
+                            <li><a href="#">일상참여</a></li>
+                        </ul>
+                    </li>
+                    <li>소식과 자료
+                        <ul>
+                            <li><a href="#">WWF report</a></li>
+                            <li><a href="#">WWF press</a></li>
+                            <li><a href="#">WWF story</a></li>
+                            <li><a href="#">WWF news</a></li>
+                            <li><a href="#">판다메일</a></li>
+                        </ul>
+                    </li>
+                    <li>후원하기
+                        <ul>
+                            <li><a href="#">후원안내</a></li>
+                            <li><a href="#">정기후원</a></li>
+                            <li><a href="#">일시후원</a></li>
+                            <li><a href="#">기업후원</a></li>
+                            <li><a href="#">자주 묻는 질문</a></li>
+                        </ul>
+                    </li>
+                    <li class="mypage"><a href="#">My page</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="headerafter"></div>
+        <div id="contents">
+            <div id="ourocean">
+               <div class="oc">
+                    <p2>Project </p2><h2>Our Ocean</h2><br>
+                    <p>해양오염으로 부터<br> 바다를 지켜주세요</p>
+               </div>  
+                    <div class="oc_box1"></div>
+                    <div class="oc_box2"></div>
+                    <div class="oc_box3"></div>
+                    <div class="dn_box"><a href="#">후원하기</a></div>
+            </div>
+            <div id="polarbear">
+                <p2>Campain </p2><h2>WWF Climate & Energy</h2>
+                <p>기후 위기로 사라지는 북극곰을 지켜주세요</p>
+                <div class="dn_box"><a href="#">후원하기</a></div>
+            </div>
+            <div id="wwfact">
+                <p2>기관소개 </p2><h2><p1> WWF</p1> 활동</h2>
+              <div class="intro_box">
+                        <div class="first">
+                        <h2>생물 다양성 보전</h2>
+                        </div>
+                        <div class="second">
+                        <h2>생태 발자국 감축</h2>
+                        </div>
+                </div>
+                    <div id="act">
+                        <div class="act 01">
+                        <a href="#"><img src="http://placehold.it/385x457"/></a><br><br>
+                        <p3><strong>기후 에너지</strong> X 씨티은행</p3>
+                        <p>WWF와 함께 기후변화의 위기를 막고<br>
+                           멸종위기종과 서식지를 보전하세요.</p>
+                        </div>
+                        <div class="act 02">
+                        <a href="#"><img src="http://placehold.it/385x457"/></a><br><br>
+                        <p3><strong>해양보전</strong> 치어럽밴드</p3>
+                        <p>치어럽으로 지속가능한<br>
+                           한국의 바다를 만들어요!</p>
+                        </div>
+                        <div class="act 03">
+                        <a href="#"><img src="http://placehold.it/385x457"/></a><br><br>
+                        <p3><strong>Our PLANET</strong> X Netflix</p3>
+                        <p>함께 만들어가 나가는 세상<br>
+                           더 살기좋은 우리의 지구</p>
+                        </div>
+                   </div>
+            </div>
+            <hr>
+            <div id="wwfkorea">
+                <p2>WWF Korea </p2><h2><p1> WWF</p1> 한국본부 중점사업</h2>
+                    <div id="k_act">
+                        <div class="k_act">
+                        <div class="k01"></div><br>
+                        <p3><strong>한국의 해양보전활동</strong></p3>
+                        <p>한국을 모범적인 지속가능한 어업<br>
+                        국가로 만들기위해 정부, 민간부문,<br>
+                        학계 및 NGO와 협력하고 있습니다.</p>
+                        </div>
+                        <div class="k_act">
+                        <div class="k02"></div><br>
+                        <p3><strong>생태발자국 조사 및 감축</strong></p3>
+                        <p>우리의 생활을 유지하기 위해<br>
+                        지구에 남기는 생태발자국을 조사하고<br>
+                        이를 감축하기 위한 방안을 제시합니다.</p>
+                        </div>
+                        <div class="k_act">
+                        <div class="k03"></div><br>
+                        <p3><strong>기후변화와 재생에너지</strong></p3>
+                        <p>기후변화에  회복력있는 공정한<br>
+                        저탄소 사회를 구축하는 데<br>
+                        기여하고자 합니다</p>
+                        </div>
+                    </div>
+            </div>
+            <div id="sns">
+                <div class="snstxt">
+                 <p2>#TogetherPossible </p2><h2><p1> #</p1>함께 <p1> #</p1>참여해요</h2><br>
+                <br> <p6>지구를 위해 행동하세요<br>
+                    함께라면 가능합니다</p6></div>
+                  <div id="earthhour"></div>
+                  <div class="vrsc01">
+                  <p><p1>#</p1>EARTHHOUR <p1> #</p1>NatureMatters <p1> #</p1>자연을위한약속</p></div>
+                  <div id="vegan"></div>
+                  <div class="vrsc02">
+                  <p><p1>#</p1>Eat4Eearth <p1> #</p1>지구를위한채식</p></div>
+                  <div id="pps"></div>
+                  <div class="vrsc03">
+                  <p><p1>#</p1>상괭이도와주기 <p1> #</p1>지속가능한바다</p></div>
+                  
+            </div>
+            <div id="news">
+                <p2>information</p2><h2> NEWS <p1>&</p1> REPORT</h2>
+                <div class="news">
+                <p4><p1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[보도]</p1>&nbsp; WWF 기후위기 대응 자연보전 운동 어스아워 개최</p4> 
+                <p5>&nbsp;24 Mar 2020</p5>
+                <hr> 
+                <p4><p1>&nbsp;&nbsp;&nbsp;&nbsp;[공지]</p1>&nbsp; 개인정보 처리방침 개정 안내</p4>  
+                <p5>&nbsp;09 Mar 2020 </p5> 
+                </div>
+            </div>
+            <div id="d_notice">
+             <h2><center>후원금 결제 안내</center></h2><br>
+             <p>
+                <p1>☻</p1> 정기 후원금은 매월 4일에 출금됩니다. (출금 실패 시 10,15,20,25일에 재청구가 시도됩니다.)<br>
+                <p1>☻</p1> 첫 정기 후원금은 4,10,15,20,25일 중 가까운 일자에 결제됩니다.<br>
+                <p1>☻</p1> 결제일자가 주말 또는 휴일인 경우 은행 영업일 기준 다음날 출금(결제)됩니다.<br>
+                <p1>☻</p1> 신용카드 후원 시 나이스빌링, 나이스_정기과금, 후원금_나이스. 또는 Nice로 표시되어 청구됩니다.<br>
+                <p1>☻</p1> 일시 후원금은 신청 즉시 결제가 이루어집니다.<br>
+            </p>   
+            </div>
+        </div>
+        <div id="contentsafter"></div>
+        <div id="footer">
+            <div class="f_logo"></div>
+            <div class="f_article">
+                <h4>사람과 자연의 조화, 우리가 만들어가는 미래입니다.</h4>
+                <hr>
+                <p><a href="#">후원회원 약관 </a>&nbsp; l &nbsp;<a href="#">뉴스레터 </a>
+                  &nbsp; l &nbsp;<a href="#">신청문의 </a>&nbsp; l &nbsp;
+                  <a href="#"> 개인정보 처리방침</a></p>
+  
+                <p>재단법인 한국세계자연기금 l 대표자 : 손성환 l 고유번호 : 101-82-23485 l 서울시 종로구 종로 38 서울글로벌센터 702호<br>
+                후원 문의 <a href="members@wwfkorea.or.kr">members@wwfkorea.or.kr</a> l 기부/ 
+                제휴 문의 partnership@wwfkorea.or.kr l<br>
+                홍보 및 마케팅 문의 <a href="marketing@wwfkorea.or.kr">marketing@wwfkorea.or.kr</a> l <br>
+                    기타 문의 <a href="info@wwfkorea.or.kr">info@wwfkorea.or.kr</a> l 대표전화 : 02-722-1601</p>
+                <p>© 2019 WWF – World Wide Fund For Nature (also known as World Wildlife Fund). Creative Commons licence.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
