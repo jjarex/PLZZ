@@ -14,7 +14,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
 <script src="js/jquery.mousewheel.min.js"></script>
 <script src="js/jquery.easing.1.3.min.js"></script>
-    
+<script>
+     $(document).ready(function(){
+        $(".header").load("html/header.html");
+        $(".footer").load("html/footer.html");
+     });
+</script>    
 </head>
 <body>
  <div class="header"></div>
@@ -688,12 +693,7 @@ function dragElement(elmnt) {
     
     
     
-    <script>
-        $(document).ready(function(){
-           $(".header").load("html/header.html");
-           $(".footer").load("html/footer.html");
-        });
-    </script>
+ 
     <script>
         $(document).ready(function(){
             

@@ -51,7 +51,8 @@ a {text-decoration: none; font-size: 12px; color: #4e4e4b ; }
 
 
 
-#mydivheader {
+#mydivheader {font-size: 
+   color: floralwhite
   padding: 10px;
   cursor: move;
   z-index: 10;
@@ -403,15 +404,31 @@ section:nth-child(9) span {color: #111;}
     .arr_02>ul>li:nth-child(5){display: none;}
     #mydiv {display: none;}
     #member {display: none;}
-    
-    
+
+}
+
+@media all and (min-width:760px) and (max-width:900px){
+        .arr_01>ul>li,.arr_02>ul>li {display: none;}
+    .arr_01>ul>li:nth-child(5){display: block;} 
+    .arr_02>ul>li:nth-child(5){display: block;}   
+    footer{display: none;}
+    .header {display: none;}
+    #mydiv {display: none;}
+    #wrapper>#image img{width: 70%; margin:0;}
+    .firstph{display: none;}
+    .best_more{width:100%; position: absolute; bottom: 30px; left: 30px;}
 }
 
 @media all and (max-width:761px) {
     .arr_01>ul>li,.arr_02>ul>li {display: none;}
     .arr_01>ul>li:nth-child(5){display: block;} 
     .arr_02>ul>li:nth-child(5){display: block;}   
-    .footer{display: none;}
+    footer{display: none;}
+    .header {display: none;}
+    #mydiv {display: none;}
+    #wrapper>#image img{width: 70%; margin:0;}
+    .firstph{display: none;}
+    .best_more{width:100%; position: absolute; bottom: 30px; left: 30px;}
 }
 
 
@@ -599,9 +616,9 @@ padding: 10px;}
 
 
 /*footer*/
-footer {position: relative; display: block; width: 100%; padding:30px 0;}
+.footer {position: relative; display: block; width: 100%; height: 900px; padding:30px 0;}
 #footer_wrap{width:900px; margin: 0 auto;}
-table{width: 100%; border-collapse: collapse;}
+table{width: 100%; border-collapse: collapse; background:  }
 td{border: 1px solid #fff; vertical-align: top;}
 li{list-style: none; }
 footer a {text-decoration: none; color: #4e4e4b; font-size: 13px;}
