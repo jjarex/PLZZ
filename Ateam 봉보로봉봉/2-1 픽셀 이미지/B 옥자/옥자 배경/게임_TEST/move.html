@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<script src="js/jquery-3.4.1.min.js"></script>
+<link rel="stylesheet" href="move.css">
+</head>
+
+<script>
+    
+     
+    </script>
+<body>
+   <div class="container">
+    <div class="stage">
+    <div class="block block1"></div>
+    <div class="block block2"></div>
+    <div class="block block3"></div>
+    <div class="block block4"></div>
+    <div class="block block5"></div>
+    <div class="block block6"></div>
+    
+    
+    
+    
+    
+    
+    <span id="p2" class="glyphicon glyphicon-asterisk player">zcxvzcxvzcxv</span></div></div>
+<script>
+$(function(){
+	var keypress = {}, // 어떤 키가 눌려 있는지 저장
+	p2x = 0, p2y = 0, speed = 1, $p2 = $('#p2');
+	setInterval(function(){ // 주기적으로 검사
+		if(keypress['87']) p2y -= speed; // up - w
+		if(keypress['83']) p2y += speed; // down - s
+		if(keypress['65']) p2x -= speed; // left - a
+		if(keypress['68']) p2x += speed; // right - d
+ 
+		$p2.css({top: p2y, left: p2x});
+	}, 10); // 매 0.01 초마다 실행
+ 
+	$(document).keydown(function(e){ // 어떤 키가 눌렸는지 저장 
+		keypress[e.which.toString()] = true;
+	});
+	$(document).keyup(function(e){ // 눌렸던 키를 해제
+		keypress[e.which.toString()] = false;
+	});
+});
+</script>
+</body>
+</html>

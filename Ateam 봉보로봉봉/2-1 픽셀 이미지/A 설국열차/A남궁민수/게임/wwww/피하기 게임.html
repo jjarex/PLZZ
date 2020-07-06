@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>stage-Okja</title> 
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/stage2.css">
+    
+    
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+    <!--키 감지 & 플레이-->
+    <script type="text/javascript" src="js/play2.js"></script>
+    <script type="text/javascript" src="js/sound.js"></script>
+    
+    
+</head>
+
+<body>
+   
+<div class="container">
+    <div class="game">
+        <input type="checkbox" id="onoff" class="onoff" name="b1" onchange="myfunction(this);">
+        <label for="onoff"></label>
+
+        <img id="pc" class="okja" src="src/image/idle.gif">
+ 
+        <img src="src/image/villain_b.gif" class="vill v1">
+        <img src="src/image/villain_f.gif" class="vill v2">
+        <img src="src/image/villain_f.gif" class="vill v3">
+        <img src="src/image/villain_b.gif" class="vill v4">
+        <img src="src/image/villain_f.gif" class="vill v5">
+        <img src="src/image/villain_b.gif" class="vill v6">
+
+       
+        <div class="start-message">
+            START
+            <span class="guide-message">SPACE 눌러 게임을 시작하세요.</span>
+<!--            준수 추가  스패이스로 수정-->
+        </div>
+        
+        <div class="end-message">
+            GAME OVER! TRY AGAIN!
+            <span class="guide-message">시작버튼을 눌러 게임을 다시 시작하세요.</span>
+        </div>  
+        <audio id="keymovesound">
+           <source src="soundfx/untitled.mp3" type="audio/mp3">
+            
+        </audio> 
+          <audio id="start">start
+           <source src="soundfx/start.mp3" type="audio/mp3">
+               
+        </audio>   
+    </div> 
+</div>
+
+<div class="header">
+    <div class="logo"></div>
+    <div class="nav">
+        <ul>
+            <li><span>WHO IS HE?</span><span>감독 소개</span></li>
+            <li><span>FILMOGRAPHY</span><span>필모그래피</span></li>
+            <li><span>MANUAL</span><span>안내서</span></li>
+            <li><span>CHARACTER</span><span>등장인물</span></li>
+            <li><span>COMMUNITY</span><span>커뮤니티</span></li>
+            <li><span>GOODS</span><span>관련 상품</span></li>
+        </ul>
+    </div>
+</div>
+
+<div class="footer"> 
+    <span>footer</span>
+    <input class="sub" type="button" value="구독하기">
+</div>
+
+</body>
+
+</html>

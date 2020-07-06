@@ -1,0 +1,231 @@
+
+
+/* .header {
+    width: 1500px;
+    height: 100px;
+    margin: 0 auto;
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+.logo {
+    display: block;
+    text-align: center;
+    color: white;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin: 0;
+    margin-right: auto;
+}
+.nav {
+    
+} */
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+/*
+    display: flex;
+    align-items: center;
+    justify-content: center;
+*/
+
+    background: url('../src/image/backbround_2.gif') no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+}
+.container:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+.game {
+    width: 1500px;
+    height: 750px;
+    margin: 100px auto 0;
+    background: url(../src/image/bgn.jpg) no-repeat center;
+    position: relative;
+    overflow: hidden;
+    z-index: 5;
+}
+.bottomElem {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 50;
+}
+
+/* 옥자 */
+.okja {
+    position: absolute;
+    left: 30px;
+    top: 360px;
+    margin-left: 0px;
+    margin-top: 0px;
+    z-index: 40;
+    transform-origin: center;
+
+}
+
+.vill {
+    display: block;
+    z-index: 20;
+    position: absolute;
+}
+.v1 {
+    left: 200px;
+    bottom: -76px;
+}
+
+.v2 {
+    left: 350px;
+    top: -76px;
+}
+
+.v3 {
+    left: 710px;
+    top: -76px;
+}
+
+.v4 {
+    left: 770px;
+    bottom: -76px;
+}
+
+.v5 {
+    left: 1100px;
+    top: -76px;
+}
+.v6 {
+    left: 1170px;
+    bottom: -76px;
+}
+
+/* 메세지 박스 */
+.howtoplay {
+    position: absolute;
+    left: 31px;
+    top: 260px;
+    
+    width: 150px;
+    height: 100px;
+    box-sizing: border-box;
+    padding: 20px 0;
+    background: url(../src/image/howtoplay.png) no-repeat center;
+    background-size: contain;
+    border-radius: 20px;
+    
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.alert {
+    /* -message 공통 css*/
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 50;
+    position: absolute;
+    color: white;
+    text-align: center;
+}
+.start-message {
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    height: 130px;
+    margin-left: -150px;
+    margin-top: -70px;
+    padding-top: 15px;
+}
+.end-message,
+.clear-message {
+    display: none;
+    left: 0;
+    top: 0;
+    width: 1500px;
+    height: 750px;
+    box-sizing: border-box;
+}
+.message {
+    display: block;
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1.15;
+}
+.replay {
+    margin-top: 23%;
+}
+.guide-message {
+    font-size: 15px;
+    display: block;
+    font-weight: normal;
+    color: white;
+    margin-top: 14px;
+}
+
+/* clear message */
+.clear {
+    margin-top: 21%;
+}
+.next-stage {
+    display: block;
+    width: 150px;
+    height: 2rem;
+    margin: 14px auto;
+    border: 1px solid white;
+    color: white;
+    line-height: 2;
+    text-decoration: none;
+}
+.next-stage:hover {
+    text-decoration: underline;
+}
+
+/* 사운드 on&off */
+input.onoff {
+    position: absolute;
+    left: -3000%;
+}
+
+input.onoff+label {
+    overflow: hidden;
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 56px;
+    height: 56px;
+    background: transparent;
+    z-index: 30;
+}
+
+input.onoff+label:before {
+    content: url(../src/image/on.png);
+    width: 56px;
+    height: 56px;
+}
+
+input.onoff:checked+label:before {
+    content: url(../src/image/off.png);
+}
+
+
+
+

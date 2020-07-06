@@ -1,0 +1,29 @@
+*{padding:0; margin:0;}
+li {list-style: none; padding: 0;}
+a {text-decoration: none;}
+
+/*본문 텍스트*/
+.text_font {
+    font-size: 10px; 
+    font-family: sans-serif;
+    color: #eee;
+    line-height: 15px;
+}
+/*제목 텍스트*/
+.main_font {
+    font-size: 20px;
+    font-family: sans-serif;
+    color: white;
+    line-height: 30px;
+}
+
+.box {border: 1px solid #000;
+box-sizing: border-box; }
+
+
+
+/*배경 이미지 사진 사용 시, black 0,0,0,0.7
+
+추후 추가사항 있을 수 있음.
+
+*/

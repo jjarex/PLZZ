@@ -1,0 +1,113 @@
+<html>
+	<head>
+		<title>Space Shooter</title>
+		<script type="text/javascript" src="phaser.min.js"></script>
+		<script type="text/javascript" src="game.js"></script>
+		<link rel="stylesheet" href="css/basic.css">
+		<link rel="stylesheet" href="css/">
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+    <!--키 감지 & 플레이-->
+   
+    <script type="text/javascript" src="js/sound.js"></script>
+        <script type="text/javascript" src="js/bgm.js"></script>
+
+
+<!--
+<script>
+        
+ $(function () { 
+//    window.addEventListener(
+//        "keydown", checkKeyPress, false);
+//
+//    function checkKeyPress(key) {
+//        if (key.keyCode == "38") {
+//            alert("tsh 'a' dh");
+//        }
+//    } 
+
+//// START // 
+//var left_px = pc.position().left;    //PC 가로축 좌표 left
+//var top_px = pc.position().top;        //PC 세로축 좌표 top
+//var br_width = $("#game").innerWidth(); //브라우저 가로크기
+//var br_height = $("#game").innerHeight();//브라우저 세로크기
+//var pc_width = pc.innerWidth();
+//var pc_height = pc.innerHeight();
+//     
+//function keyx_move() {
+//if(left_px == br_width - pc_width - 10){
+//            pc.attr("src", "src/image/hurt.gif");
+//            document.getElementById('success').play();
+//            $('.clear-message').show();
+////            alert('GAME CLEAR');
+//        }
+//
+//}
+//
+//});
+</script>
+-->
+
+
+	</head>
+<body>
+	    <div class="container">
+        <div id="game">
+        <!-- 배경음-->
+	       <input type="checkbox" id="onoff" class="onoff" name="b1" onchange="myfunction(this);">
+            <label for="onoff"></label> 
+        </div>
+        <div class="alert end-message">
+            <span class="message replay">GAME OVER! TRY AGAIN!</span>
+            <span class="guide-message">F5를 눌러 게임을 처음부터 다시 시작하세요.</span>
+        </div> 
+        
+        <div class="alert clear-message">
+            <span class="message clear">GAME CLEAR!</span>
+            <span class="guide-message">버튼을 누르면 다음 스케이지로 이동합니다.</span>
+            <span class="guide-message">다시 시작하려면 F5를 눌러주세요.</span>
+            <a class="next-stage" href="#">NEXT STAGE</a>
+        </div>
+            <div class="howtoplay">방향키를 눌러서<br>출구까지 이동하세요!</div>
+         
+        <audio id="keymovesound">
+           <source src="soundfx/untitled.mp3" type="audio/mp3">
+            
+        </audio> 
+          <audio id="start">start
+           <source src="soundfx/start.mp3" type="audio/mp3">
+               
+        </audio>
+         <audio id="gameover">
+           <source src="soundfx/game_over2.mp3" type="audio/mp3">
+               
+        </audio>   
+          
+          <audio id="success">  
+<!--          추가-->
+           <source src="soundfx/success.mp3" type="audio/mp3">
+               
+        </audio>      
+		</div>
+		
+		
+    <div class="header">
+    <div class="logo"></div>
+    <div class="nav">
+        <ul>
+            <li><span>WHO IS HE?</span><span>감독 소개</span></li>
+            <li><span>FILMOGRAPHY</span><span>필모그래피</span></li>
+            <li><span>MANUAL</span><span>안내서</span></li>
+            <li><span>CHARACTER</span><span>등장인물</span></li>
+            <li><span>COMMUNITY</span><span>커뮤니티</span></li>
+            <li><span>GOODS</span><span>관련 상품</span></li>
+        </ul>
+        </div>
+    </div>
+
+    <div class="footer"> 
+        <span>footer</span>
+        <input class="sub" type="button" value="구독하기">
+    </div>
+</body>
+</html>

@@ -1,0 +1,284 @@
+
+
+.header {
+    width: 1500px;
+    height: 100px;
+    margin: 0 auto;
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+.logo {
+    display: block;
+    text-align: center;
+    color: white;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin: 0;
+    margin-right: auto;
+}
+.nav {
+    
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: url('../src/image/background.gif') no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+}
+.container:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+/*옥자 수정*/
+.okja {
+    position: absolute;
+    left: 30px;
+    top: 360px;
+    margin-left: 0px;
+    margin-top: 0px;
+    z-index: 40;
+    transform-origin: center;
+
+}
+.game {
+    width: 1500px;
+    height: 750px;
+    margin: 0 auto;
+    background: url(../src/image/back.png) no-repeat center;
+    position: relative;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.vill {
+    display: block;
+    z-index: 20;
+    position: absolute;
+}
+.v1 {
+    left: 200px;
+    bottom: -76px;
+}
+
+.v2 {
+    left: 350px;
+    top: -76px;
+}
+
+.v3 {
+    left: 710px;
+    top: -76px;
+}
+
+.v4 {
+    left: 770px;
+    bottom: -76px;
+}
+
+.v5 {
+    left: 1100px;
+    top: -76px;
+}
+.v6 {
+    left: 1170px;
+    bottom: -76px;
+}
+
+.block {
+    display: block;
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 0px;
+    z-index: 10;
+}
+
+/*위 장애물*/
+.block0 {
+    width: 100px;
+    height: 360px;
+    left: 0;
+    top: 0;
+    background: rgba(255, 17, 0, 0.7);
+}
+
+.block1 {
+    width: 228px;
+    height: 340px;
+    left: 100px;
+    top: 0;
+    background: rgba(255, 17, 0, 0.7);
+}
+
+.block2 {
+    width: 170px;
+    height: 322px;
+    left: 432px;
+    top: 0;
+    background: rgba(255, 100, 0, 0.7);
+}
+
+.block3 {
+    width: 87px;
+    height: 380px;
+    left: 602px;
+    top: 0;
+    background: rgba(255, 100, 0, 0.7);
+
+}
+
+.block4 {
+    width: 276px;
+    height: 260px;
+    left: 793px;
+    top: 0;
+    background: rgba(255, 200, 0, 0.7);
+
+}
+
+.block5 {
+    width: 327px;
+    height: 220px;
+    left: 1173px;
+    top: 0;
+    background: rgba(255, 200, 0, 0.7);
+
+    z-index: 10;
+}
+
+/*아래 장애물*/
+.block6 {
+    width: 135px;
+    height: 270px;
+    left: 0;
+    bottom: 0;
+    background: rgba(2, 200, 100, 0.7);
+
+
+}
+
+.block7 {
+    width: 170px;
+    height: 277px;
+    left: 267px;
+    bottom: 0;
+    background: rgba(2, 200, 100, 0.7);
+}
+
+.block8 {
+    width: 275px;
+    height: 235px;
+    left: 437px;
+    bottom: 0;
+    background: rgba(2, 200, 100, 0.7);
+}
+
+.block9 {
+    width: 270px;
+    height: 373px;
+    left: 878px;
+    bottom: 0;
+    background: rgba(2, 10, 255, 0.7);
+}
+
+.block10 {
+    width: 234px;
+    height: 407px;
+    left: 1266px;
+    bottom: 0;
+    background: rgba(120, 10, 255, 0.7);
+}
+.block {
+    background-color: transparent;
+}
+
+/*게임시작메세지*/
+.start-message {
+    z-index: 40;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+    margin-left: -150px;
+    margin-top: -50px;
+    background: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+.guide-message {
+    font-size: 15px;
+    display: block;
+    font-weight: normal;
+}
+
+.end-message {
+    display: none;
+    z-index: 40;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 500px;
+    height: 100px;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+    margin-left: -250px;
+    margin-top: -50px;
+
+}
+
+input.onoff {
+    position: absolute;
+    left: -3000%;
+}
+
+input.onoff+label {
+    overflow: hidden;
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 56px;
+    height: 56px;
+    background: transparent;
+    z-index: 30;
+}
+
+input.onoff+label:before {
+    content: url(../src/image/on.png);
+    width: 56px;
+    height: 56px;
+}
+
+input.onoff:checked+label:before {
+    content: url(../src/image/off.png);
+}
+
+.life {
+    z-index: 40;
+}

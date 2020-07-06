@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <title>parasite</title>
+    <link rel="stylesheet" href="css/oindex.css">
+    <link rel="stylesheet" href="css/parasite_game.css">
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/stage2.css">
+    
+</head>
+<body>
+ 
+  <header>
+   <div class="logo"></div>
+   <div class="nav">
+        <ul>
+            <li><span>WHO IS HE?</span><span>감독 소개</span></li>
+            <li><span>FILMOGRAPHY</span><span>필모그래피</span></li>
+            <li><span>MANUAL</span><span>안내서</span></li>
+            <li><span>CHARACTER</span><span>등장인물</span></li>
+            <li><span>COMMUNITY</span><span>커뮤니티</span></li>
+            <li><span>GOODS</span><span>관련 상품</span></li>
+        </ul>
+   </div>
+   </header>
+   
+    <div class="game game1"><div class="inner">
+         
+            <div id="SplashScreen" style="border:1px solid #000; width: 1500px; height: 750px; 
+                background-image: url('images/background_sprite1.png'); 
+                background-color: dimgrey;
+                background-blend-mode: multiply;
+                background-size: 1500px 750px;">
+        <div align="center" style = "margin-top:250px; margin-right: 100px; margin-left: 100px;">
+            <h1>PARASITE</h1>
+            <small>by Bonborobonbon</small>
+            <h2>Instructions</h2>  
+            <br>
+            <hr>
+            <br>
+            <h3>Arrow buttons (or W,A,D) to move and jump </h3>
+            <h3>아버지는 계단을 올라오시기만 하면 됩니다.</h3>
+<!--
+            <h3>Collect all coins to unlock the exit for next level</h3>
+            <h3>Press 'c' to turn on cheat mode and 'v' to turn it off </h3>
+-->
+            <br>
+            <input type="text" id="playerName" placeholder="Enter your name here" onkeyup="enableStartButton()" />
+            <input id="StartButton" type="button" value="Start" onclick="startGame()" />
+        </div>
+    </div>
+    
+<!--아래가 나와야해요-->
+<!--
+ <div class="alert start-message">
+            <span class="message">STAGE 2</span><span style="font-size: 20px;">START</span>
+            <span class="guide-message">SPACE 눌러 게임을 시작하세요.</span>
+        </div>
+-->
+        
+<canvas id="canvas" style="border:1px solid #000; display:none"></canvas>
+<div>
+    <input id="RestartButton" type="button" value = "Play again!" onclick="restartGame()" style="position: absolute; left:45%; top:500px;display:none" />
+</div>
+        
+    </div></div>
+    <div class="game game2"><div class="inner"></div></div>
+    <div class="game game3"><div class="inner"></div></div>
+    <div class="game game4"><div class="inner"></div></div>
+    <div class="game game5"><div class="inner"></div></div>
+    
+    <div class="footer">
+        <span>footer</span>
+        <input class="sub" type="button" value="구독하기">
+    </div>
+<script src="js/parasite_game_0701_test.js"></script> 
+</body>
+</html>

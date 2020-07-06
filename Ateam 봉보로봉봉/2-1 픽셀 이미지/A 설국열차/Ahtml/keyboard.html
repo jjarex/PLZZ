@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <style>
+     
+        #map{
+            position: relative;
+            background: url(%EC%84%A4%EA%B5%AD%EC%97%B4%EC%B0%A8%EB%B0%B0%EA%B2%BD.png)no-repeat;
+            border: 1px solid red;
+            height: 1000px;
+            width: auto;
+        }
+           #player{
+            position: absolute;
+               top: 0;
+            background: url(%EA%B3%A0%EC%95%84%EC%84%B1run.gif)no-repeat;
+            width: 109px;
+            height: 140px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+    $(function(){
+       var player = "<div id='player'></div>";
+        $("#map").append(player);
+        
+//        $(document).keydown(function(e){
+//           //alert(e.keyCode); 
+//            var position = $("#player").position();
+//                        
+//            
+//            switch(e.keyCode){
+//                    case 37
+//                    $("#player").css('left', position.left - 20 + 'px');
+//                    break;
+//                    case 38
+//                    $("#player").css();
+//                    break;
+//                    case 39
+//                    $("#player").css();
+//                    break;
+//                    case 40
+//                    $("#player").css();
+//                    break;
+//            }
+//        });
+    });
+    </script>
+</head>
+<body>
+    
+    <div id="map">        
+    </div>
+    
+    
+</body>
+</html>

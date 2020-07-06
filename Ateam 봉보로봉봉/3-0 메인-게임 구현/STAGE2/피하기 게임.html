@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>BONBONG | STAGE 2</title> 
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/stage2.css">
+    
+    
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+    <!--키 감지 & 플레이-->
+    <script type="text/javascript" src="js/play2.js"></script>
+    <!--사운드(**한 파일로 정리하기)-->
+    <script type="text/javascript" src="js/sound.js"></script>
+    <script type="text/javascript" src="js/bgm.js"></script>
+    
+</head>
+
+<body>
+<div class="header">
+    <div class="logo"></div>
+    <div class="nav">
+        <ul>
+            <li><span>WHO IS HE?</span><span>감독 소개</span></li>
+            <li><span>FILMOGRAPHY</span><span>필모그래피</span></li>
+            <li><span>MANUAL</span><span>안내서</span></li>
+            <li><span>CHARACTER</span><span>등장인물</span></li>
+            <li><span>COMMUNITY</span><span>커뮤니티</span></li>
+            <li><span>GOODS</span><span>관련 상품</span></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div class="game">
+        <input type="checkbox" id="onoff" class="onoff" name="b1" onchange="myfunction(this);">
+        <label for="onoff"></label>
+
+        <!--주인공 캐릭터 Playable Character/ 152 x 120 -->
+        <img id="pc" class="okja" src="src/image/idle.gif">
+ 
+        <!--악당들 Villains/ 60 x 76 -->
+        <div class="villains">
+            <img src="src/image/villain_0_b.gif" class="vill v1">
+            <img src="src/image/villain_0_f.gif" class="vill v2">
+            <img src="src/image/villain_0_f.gif" class="vill v3">
+            <img src="src/image/villain_0_b.gif" class="vill v4">
+            <img src="src/image/villain_0_f.gif" class="vill v5">
+            <img src="src/image/villain_0_b.gif" class="vill v6">
+        </div>
+        <!--옥자보다 위에 보일 이미지-->
+        <img class="bottomElem" src="src/image/bottomElem.png">
+
+        <!--메세지 박스 MESSAGE BOX-->
+        <div class="howtoplay">방향키를 눌러서<br>출구까지 이동하세요!</div>
+
+        <div class="alert start-message">
+            <span class="message">STAGE 2</span><span style="font-size: 20px;">START</span>
+            <span class="guide-message">SPACE 눌러 게임을 시작하세요.</span>
+        </div>
+        
+        <div class="alert end-message">
+            <span class="message replay">GAME OVER! TRY AGAIN!</span>
+            <span class="guide-message">F5를 눌러 게임을 처음부터 다시 시작하세요.</span>
+        </div> 
+        
+        <div class="alert clear-message">
+            <span class="message clear">GAME CLEAR!</span>
+            <span class="guide-message">버튼을 누르면 다음 스케이지로 이동합니다.</span>
+            <span class="guide-message">다시 시작하려면 F5를 눌러주세요.</span>
+            <a class="next-stage" href="#">NEXT STAGE</a>
+        </div>
+         
+        <!--오디오 AUDIO-->
+        <audio id="keymovesound">
+           <source src="soundfx/untitled.mp3" type="audio/mp3">
+        </audio>
+
+        <audio id="start">start
+           <source src="soundfx/start.mp3" type="audio/mp3">
+        </audio>
+
+         <audio id="gameover">
+           <source src="soundfx/game_over2.mp3" type="audio/mp3">
+        </audio>   
+          
+        <audio id="success"> 
+           <source src="soundfx/success.mp3" type="audio/mp3">
+        </audio>
+    </div> 
+</div>
+
+<div class="footer"> 
+    <span>footer</span>
+    <input class="sub" type="button" value="구독하기">
+</div>
+
+</body>
+
+</html>

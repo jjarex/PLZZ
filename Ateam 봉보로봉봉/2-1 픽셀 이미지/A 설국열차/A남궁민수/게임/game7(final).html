@@ -1,0 +1,281 @@
+<html>
+<head>
+<style>
+#hero {
+  background: url(idle.gif)no-repeat;
+  width: 240px;
+  height: 150px;
+  position: absolute;
+}
+
+#background {
+  background: url(back.png)no-repeat;
+  width: 1500px;
+  height: 700px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+	overflow: hidden;
+}
+#laser {
+  background: #00ff00;
+  width: 50px;
+  height: 3px;
+  position: absolute;
+}
+.enemy {
+  background: #0000ff;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+}
+#score {
+  color: #ffffff;
+  font-size: 18pt;
+  position: absolute;
+0  left: 20px;
+  top: 20px;
+}
+#gameover {
+  color: #ff0000;
+  font-size: 20px;
+  position: absolute;
+  left: 160px;
+  top: 200px;
+  visibility: hidden;
+}
+#Yanggang {
+  background: url(yanggang.gif)no-repeat;
+	transform:rotate(-30deg);
+	-webkit-transform:rotate(-30deg);
+  width: 100px;
+  height: 60px;
+  position: absolute;
+}
+	
+</style>
+</head>
+<body>
+<div id="background">
+	<div id="hero"></div>
+	<div class="enemy"></div>
+	
+	<div id="laser"></div>
+	<div id="score"></div>
+	<div id="gameover">GAME OVER</div>
+	<div id="Yanggang"></div>
+</div>
+
+
+<script>
+var hero = document.querySelector('#hero');
+var LEFT_KEY = 37;
+var RIGHT_KEY = 39;
+var SPACE_KEY = 32;
+var HERO_MOVEMENT = 3;
+var lastLoopRun = 0;
+var score = 0;
+var iterations = 0;
+var controller = new Object();
+var enemies = new Array();
+
+function createSprite(element, x, y, w, h) {
+  var result = new Object();
+  result.element = element;
+  result.x = x;
+  result.y = y;
+  result.w = w;
+  result.h = h;
+  return result;
+}
+
+//방향키 누르면 (좌우방향키)
+function toggleKey(keyCode, isPressed) {
+  if (keyCode == LEFT_KEY) {	//왼쪽
+    controller.left = isPressed;
+	document.getElementById("hero").style.backgroundImage = "url('run_left.gif')"; // 이미지 변경
+  }
+	
+  if (keyCode == RIGHT_KEY) {	//오른쪽
+    controller.right = isPressed;
+	document.getElementById("hero").style.backgroundImage = "url('run_right.gif')"; // 이미지 변경
+  }
+
+  if (keyCode == SPACE_KEY) {	//스페이스바
+    controller.space = isPressed;
+	  document.getElementById("hero").style.backgroundImage = "url('attack.gif')";		
+  	}
+};
+	
+	
+//안눌렀을 때, 모션
+window.onkeyup = function()	{
+	document.getElementById("hero").style.backgroundImage = "url('idle.gif')";	
+};
+
+	
+	
+	
+	
+
+function intersects(a, b) {
+  return a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
+}
+
+function ensureBounds(sprite, ignoreY, enemies) {	//안전한 범위
+  if (sprite.x < 20) {
+    sprite.x = 20;
+  }
+  if (!ignoreY && sprite.y < 20) {
+    sprite.y = 20;
+  }
+  if (sprite.x + sprite.w > 1500) {
+    sprite.x = 1500 - sprite.w;
+  }
+  if (!ignoreY && sprite.y + sprite.h > 630) {
+    sprite.y = 630 - sprite.h;
+  }
+ 	
+}
+
+function setPosition(sprite) {
+  var e = document.getElementById(sprite.element);
+  e.style.left = sprite.x + 'px';
+  e.style.top = sprite.y + 'px';
+}
+
+function handleControls() {
+
+  if (controller.left) {
+    hero.x -= HERO_MOVEMENT;
+  }
+  if (controller.right) {
+    hero.x += HERO_MOVEMENT;
+  }
+  if (controller.space && laser.x >=  40) {
+    laser.x = hero.x + laser.w;
+    laser.y = hero.y - -50;
+	
+
+  }
+  
+  ensureBounds(hero);
+}
+	
+//악당들
+function checkCollisions() {	//충돌체크
+  for (var i = 0; i < enemies.length; i++) {
+    if (intersects(laser, enemies[i])) {
+      var element = document.getElementById(enemies[i].element);
+      element.style.visibility = 'hidden';
+      element.parentNode.removeChild(element);
+      enemies.splice(i, 1);
+      i--;
+      laser.x = -laser.w;
+      score += 100;
+    } else if (intersects(hero, enemies[i])) {
+      gameOver();
+    } else if (enemies[i].y + enemies[i].h >= 800) {		//악당 높이
+      var element = document.getElementById(enemies[i].element);
+      element.style.visibility = 'hidden';
+      element.parentNode.removeChild(element);
+      enemies.splice(i, 1);
+      i--;
+    }
+  }
+}
+	
+//게임오버
+function gameOver() {
+  var element = document.getElementById(hero.element);
+  element.style.visibility = 'hidden';
+  element = document.getElementById('gameover');
+  element.style.visibility = 'visible';
+}
+
+function showSprites() {
+setPosition(Yanggang);
+  setPosition(hero);
+  setPosition(laser);
+  for (var i = 0; i < enemies.length; i++) {
+    setPosition(enemies[i]);
+  }
+  var scoreElement = document.getElementById('score');
+  scoreElement.innerHTML = 'SCORE: ' + score;
+}
+	
+	
+//악당 좌우
+function updatePositions() {		
+  for (var i = 0; i < enemies. length; i++) {
+    
+    enemies[i].x -= getRandom(7) - 0;
+    ensureBounds(enemies[i], true);
+  }
+  laser.x += 120;
+}
+
+	
+// enemy = 악당네임
+function addEnemy() {
+  var interval = 50;	//간격
+  if (iterations > 1500) {		//반복 (반복했을 때, 1500보다 작다면)
+    interval = 5;				//간격을 5로해라.
+  } else if (iterations > 1000) {	//반복했을 때, 1000보다 작다면
+    interval = 20;					//간격을 20으로해라.
+  } else if (iterations > 500) {
+    interval = 35;
+  }
+  
+  if (getRandom(interval) == 0) {	//랜덤 간격이 0과 같다면
+    var elementName = 'enemy' + getRandom(10);	
+    var enemy = createSprite(elementName, 1500, 600, 35, 35);	//악당 위치
+    
+    var element = document.createElement('div');
+    element.id = enemy.element;
+    element.className = 'enemy'; 
+    document.children[0].appendChild(element);
+    
+    enemies[enemies.length] = enemy;
+  }
+}
+
+function getRandom(maxSize) {
+  return parseInt(Math.random() * maxSize);
+}
+
+function loop() {
+  if (new Date().getTime() - lastLoopRun > 40) {
+    updatePositions();
+    handleControls();
+    checkCollisions();
+    
+    addEnemy();
+    
+    showSprites();
+    
+    lastLoopRun = new Date().getTime();
+    iterations++;
+  }
+  setTimeout('loop();', 2);
+}
+
+document.onkeydown = function(evt) {
+  toggleKey(evt.keyCode, true);
+};
+
+document.onkeyup = function(evt) {
+  toggleKey(evt.keyCode, false);
+};
+	
+
+	
+var Yanggang = createSprite('Yanggang', 600, 570, 20, 20);
+var hero = createSprite('hero', 50, 630, 40, 60);
+var laser = createSprite('laser', 0, -120, 50, 3);
+var enemy = createSprite('hero', 50, 630, 570, 60);
+loop();
+
+</script>
+</body>
+</html>
